@@ -1,0 +1,9 @@
+#define BITBAND(addr, bitnum) ((addr & 0xF0000000)+0x2000000+((addr &0xFFFFF)<<5)+(bitnum<<2)) 
+#define BIT_ADDR(addr, bitnum)   *((volatile unsigned long  *)(BITBAND(addr, bitnum)) 
+
+#define PAout(n)   BIT_ADDR(0x4001080C,n)  //输出 
+#define PAin(n)    BIT_ADDR(0x40010808,n)  //输入 
+#define PBout(n)   BIT_ADDR(0x40010C0C,n)  //输出 
+#define PBin(n)    BIT_ADDR(0x40010C08,n)  //输入 
+#define PCout(n)   BIT_ADDR(0x4001100C,n)  //输出 
+#define PCin(n)    BIT_ADDR(0x40011008,n)  //输入 
