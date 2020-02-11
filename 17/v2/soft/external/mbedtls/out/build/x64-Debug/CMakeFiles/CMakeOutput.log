@@ -1,0 +1,41 @@
+The system is: Windows - 10.0.18362 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: F:/VS/VC/Tools/MSVC/14.25.28508/bin/HostX64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.25.28508.3 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.25.28508.3
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "G:/Keyboard/17/v2/soft/external/mbedtls/out/build/x64-Debug/CMakeFiles/3.16.19112601-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: G:/Keyboard/17/v2/soft/external/mbedtls/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):F:\VS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_93803 && [1/2] Building C object CMakeFiles\cmTC_93803.dir\testCCompiler.c.obj
+[2/2] Linking C executable cmTC_93803.exe
+
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: G:/Keyboard/17/v2/soft/external/mbedtls/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):F:\VS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_92855 && [1/2] Building C object CMakeFiles\cmTC_92855.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_92855.exe
+
+
+

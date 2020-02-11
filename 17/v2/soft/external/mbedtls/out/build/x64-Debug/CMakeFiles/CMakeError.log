@@ -1,0 +1,11 @@
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: G:/Keyboard/17/v2/soft/external/mbedtls/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):F:\VS\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe cmTC_985c1 && [1/2] Building C object CMakeFiles\cmTC_985c1.dir\CheckIncludeFile.c.obj
+FAILED: CMakeFiles/cmTC_985c1.dir/CheckIncludeFile.c.obj 
+F:\VS\VC\Tools\MSVC\14.25.28508\bin\HostX64\x64\cl.exe  /nologo   /DWIN32 /D_WINDOWS /W3 /W3 /WX  /MDd /Zi /Ob0 /Od /RTC1 /showIncludes /FoCMakeFiles\cmTC_985c1.dir\CheckIncludeFile.c.obj /FdCMakeFiles\cmTC_985c1.dir\ /FS -c CheckIncludeFile.c
+CheckIncludeFile.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+ninja: build stopped: subcommand failed.
+
+
+
