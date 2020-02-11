@@ -1,0 +1,6 @@
+EWARM/**
+!*.icf
+!*.eww
+!*.ewp
+!*.ewd
+!*.s

@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HARDWARE",
+    "\\HARDWARE\\KEY",
+    "\\HARDWARE\\LED",
+    "\\HARDWARE\\USB\\CONFIG",
+    "\\HARDWARE\\USB\\LIB",
+    "\\USER"
+  ],
+  "SelectedNode": "\\HARDWARE\\KEY\\key.h",
+  "PreviewInSolutionExplorer": false
+}

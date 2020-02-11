@@ -1,0 +1,76 @@
+# include "sys.h"
+# include "usart.h"
+# include "delay.h"
+# include "led.h"
+# include "key.h"
+# include "usb_lib.h"
+# include "hw_config.h"
+# include "usb_pwr.h" 
+# include "timer.h"
+
+int main(void)
+{
+	u16 key=0;
+	delay_init();					//延时初始化
+	LED_Init();						//LED初始化
+	Key_Init();						//按键初始化
+	
+	delay_ms(300);
+ 	usb_port_set(0); 				//USB先断开
+	delay_ms(300);
+   	usb_port_set(1);				//USB再次连接			
+ 	USB_Interrupts_Config();    	//USB配置
+ 	Set_USBClock();   
+ 	USB_Init();
+	
+	while(1)
+	{
+		u8 i=2, Buf[8]={0,0,0,0,0,0,0,0};
+		key=Key_Scan();				//调用按键扫描程序获得键值
+		
+		if(key&KX_PRES)
+		{	
+			if(key&KZ_PRES)		//LeftAlt/Z
+			{
+				Buf[0]|=0X04;
+				LED_Shine(14);
+			}
+			if(key&KE_PRES)		//C
+			{
+				Buf[i]=0X06;
+				LED_Shine(7);
+				i++;
+			}
+			if(key&KR_PRES)		//V
+			{
+				Buf[i]=0X19;
+				LED_Shine(8);
+				i++;
+			}
+		}
+		else if((key&KX_PRES)==0)
+		{	
+			if(key&KZ_PRES)		//LeftShift/Z
+			{
+				Buf[0]|=0X02;
+				LED_Shine(14);
+			}
+			if(key&KR_PRES)		//R
+			{
+				Buf[i]=0X15;
+				LED_Shine(8);
+				TIM3->CR1|=0x01;
+				PA8=1;
+				i++;
+			}
+			if(key&KA_PRES)		//A
+			{
+				Buf[i]=0X04;
+				LED_Shine(9);
+				i++;
+			}
+		}
+		Joystick_Send(Buf[0],Buf[1],Buf[2],Buf[3],Buf[4],Buf[5],Buf[6],Buf[7]);
+	}
+}
+

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\HARDWARE",
+    "\\HARDWARE\\EXTI",
+    "\\STM32F10x_FWLib",
+    "\\usb",
+    "\\USER"
+  ],
+  "SelectedNode": "\\USER\\main.c",
+  "PreviewInSolutionExplorer": false
+}

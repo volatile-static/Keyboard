@@ -1,0 +1,202 @@
+BL51 BANKED LINKER/LOCATER V6.15                                                        02/05/2013  00:12:16  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.15, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE TM1638.obj TO TM1638DM RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  TM1638.obj (TM1638)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  TM1638DM (TM1638)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         ?DT?TM1638
+            DATA    001CH     0001H     UNIT         _DATA_GROUP_
+            IDATA   001DH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     008CH     UNIT         ?C_C51STARTUP
+            CODE    008FH     005BH     UNIT         ?PR?_TM1638_WRITEDATA?TM1638
+            CODE    00EAH     0050H     UNIT         ?PR?MAIN?TM1638
+            CODE    013AH     0033H     UNIT         ?PR?_TM1638_WRITECMD?TM1638
+            CODE    016DH     001AH     UNIT         ?PR?_DELAYMS?TM1638
+            CODE    0187H     0015H     UNIT         ?PR?_DELAYUS?TM1638
+            CODE    019CH     0013H     UNIT         ?C_INITSEG
+
+
+
+OVERLAY MAP OF MODULE:   TM1638DM (TM1638)
+
+
+SEGMENT                                DATA_GROUP 
+  +--> CALLED SEGMENT                START    LENGTH
+----------------------------------------------------
+?C_C51STARTUP                        -----    -----
+  +--> ?PR?MAIN?TM1638
+  +--> ?C_INITSEG
+
+?PR?MAIN?TM1638                      -----    -----
+  +--> ?PR?_DELAYMS?TM1638
+  +--> ?PR?_TM1638_WRITECMD?TM1638
+  +--> ?PR?_TM1638_WRITEDATA?TM1638
+
+?PR?_DELAYMS?TM1638                  -----    -----
+  +--> ?PR?_DELAYUS?TM1638
+
+?PR?_TM1638_WRITECMD?TM1638          -----    -----
+  +--> ?PR?_DELAYUS?TM1638
+
+BL51 BANKED LINKER/LOCATER V6.15                                                      02/05/2013  00:12:16  PAGE 2
+
+
+?PR?_TM1638_WRITEDATA?TM1638         001CH    0001H
+  +--> ?PR?_DELAYUS?TM1638
+
+
+
+SYMBOL TABLE OF MODULE:  TM1638DM (TM1638)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TM1638
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00A0H         PUBLIC        P2
+  D:00B0H         PUBLIC        P3
+  D:00A8H         PUBLIC        IE
+  D:00B8H         PUBLIC        IP
+  C:00EAH         PUBLIC        main
+  D:0008H         PUBLIC        KeyCode
+  C:016DH         PUBLIC        _DelayMs
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  D:000CH         PUBLIC        CathodeCode
+  C:0192H         PUBLIC        _DelayUs
+  B:00A0H.1       PUBLIC        CLK
+  B:00A0H.0       PUBLIC        DIO
+  C:008FH         PUBLIC        _TM1638_WriteData
+  D:00C8H         PUBLIC        T2CON
+  B:00A0H.2       PUBLIC        STB
+  C:013AH         PUBLIC        _TM1638_WriteCmd
+  D:00D0H         PUBLIC        PSW
+  C:018EH         SYMBOL        L?0030
+  -------         PROC          L?0029
+  -------         ENDPROC       L?0029
+  C:018EH         SYMBOL        L?0030
+  -------         PROC          _DELAYUS
+  D:0006H         SYMBOL        Us
+  C:0192H         LINE#         42
+  C:0192H         LINE#         43
+  C:0192H         LINE#         44
+  C:019BH         LINE#         45
+  -------         ENDPROC       _DELAYUS
+  -------         PROC          _DELAYMS
+  D:0004H         SYMBOL        Ms
+  C:016DH         LINE#         54
+  C:0171H         LINE#         55
+  C:0171H         LINE#         56
+  C:017BH         LINE#         57
+  C:017BH         LINE#         58
+  C:017BH         LINE#         59
+  C:017EH         LINE#         60
+  C:017EH         LINE#         61
+  C:0181H         LINE#         62
+  C:0184H         LINE#         63
+  C:0186H         LINE#         64
+  -------         ENDPROC       _DELAYMS
+  -------         PROC          _TM1638_WRITECMD
+BL51 BANKED LINKER/LOCATER V6.15                                                      02/05/2013  00:12:16  PAGE 3
+
+
+  D:0005H         SYMBOL        mCmd
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:013AH         LINE#         73
+  C:013CH         LINE#         74
+  C:013CH         LINE#         77
+  C:013EH         LINE#         78
+  C:0140H         LINE#         79
+  C:0140H         LINE#         80
+  C:0142H         LINE#         81
+  C:0149H         LINE#         82
+  C:0151H         LINE#         83
+  C:0153H         LINE#         84
+  C:0157H         LINE#         85
+  C:0159H         LINE#         86
+  C:0160H         LINE#         87
+  C:0164H         LINE#         88
+  C:0166H         LINE#         89
+  -------         ENDPROC       _TM1638_WRITECMD
+  -------         PROC          _TM1638_WRITEDATA
+  D:0004H         SYMBOL        mDig
+  D:0005H         SYMBOL        mData
+  -------         DO            
+  D:0003H         SYMBOL        i
+  D:001CH         SYMBOL        SendByte
+  -------         ENDDO         
+  C:008FH         LINE#         101
+  C:0091H         LINE#         102
+  C:0091H         LINE#         104
+  C:0094H         LINE#         106
+  C:0096H         LINE#         107
+  C:0097H         LINE#         108
+  C:0097H         LINE#         109
+  C:0099H         LINE#         110
+  C:00A0H         LINE#         111
+  C:00A8H         LINE#         112
+  C:00AAH         LINE#         113
+  C:00AEH         LINE#         114
+  C:00B0H         LINE#         115
+  C:00B7H         LINE#         116
+  C:00BBH         LINE#         118
+  C:00BDH         LINE#         119
+  C:00BDH         LINE#         120
+  C:00BFH         LINE#         121
+  C:00C6H         LINE#         122
+  C:00CEH         LINE#         123
+  C:00D0H         LINE#         124
+  C:00D4H         LINE#         125
+  C:00D6H         LINE#         126
+  C:00DDH         LINE#         127
+  C:00E1H         LINE#         128
+  C:00E3H         LINE#         129
+  -------         ENDPROC       _TM1638_WRITEDATA
+  -------         PROC          MAIN
+  C:00EAH         LINE#         139
+  C:00EAH         LINE#         140
+BL51 BANKED LINKER/LOCATER V6.15                                                      02/05/2013  00:12:16  PAGE 4
+
+
+  C:00EAH         LINE#         141
+  C:00F1H         LINE#         143
+  C:00F6H         LINE#         144
+  C:00FBH         LINE#         146
+  C:0100H         LINE#         148
+  C:0107H         LINE#         149
+  C:010EH         LINE#         150
+  C:0115H         LINE#         151
+  C:011CH         LINE#         152
+  C:0123H         LINE#         153
+  C:012AH         LINE#         154
+  C:0131H         LINE#         155
+  C:0138H         LINE#         157
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        TM1638
+
+Program Size: data=30.0 xdata=0 code=431
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

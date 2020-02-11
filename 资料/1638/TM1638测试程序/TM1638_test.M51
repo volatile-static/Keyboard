@@ -1,0 +1,283 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        12/05/2010  21:41:40  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE STARTUP.obj, main.obj TO TM1638_test
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  STARTUP.obj (?C_STARTUP)
+  main.obj (MAIN)
+
+
+LINK MAP OF MODULE:  TM1638_test (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0008H     UNIT         ?DT?MAIN
+            DATA    0010H     0004H     UNIT         _DATA_GROUP_
+            IDATA   0014H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     005BH     UNIT         ?PR?MAIN?MAIN
+            CODE    005EH     0052H     UNIT         ?PR?READ_KEY?MAIN
+            CODE    00B0H     0033H     UNIT         ?PR?_WRITE_ALLLED?MAIN
+            CODE    00E3H     001FH     UNIT         ?PR?INIT_TM1638?MAIN
+            CODE    0102H     0019H     UNIT         ?PR?_TM1638_WRITE?MAIN
+            CODE    011BH     0018H     UNIT         ?PR?TM1638_READ?MAIN
+            CODE    0133H     0018H     UNIT         ?PR?_WRITE_DATA?MAIN
+            CODE    014BH     0010H     UNIT         ?CO?MAIN
+            CODE    015BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    0167H     0008H     UNIT         ?PR?_WRITE_COM?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   TM1638_test (?C_STARTUP)
+
+
+SEGMENT                          DATA_GROUP 
+  +--> CALLED SEGMENT          START    LENGTH
+----------------------------------------------
+?C_C51STARTUP                  -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                  -----    -----
+  +--> ?PR?INIT_TM1638?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?_WRITE_DATA?MAIN
+  +--> ?PR?READ_KEY?MAIN
+  +--> ?PR?_WRITE_ALLLED?MAIN
+
+?PR?INIT_TM1638?MAIN           -----    -----
+  +--> ?PR?_WRITE_COM?MAIN
+  +--> ?PR?_TM1638_WRITE?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2010  21:41:40  PAGE 2
+
+
+
+?PR?_WRITE_COM?MAIN            -----    -----
+  +--> ?PR?_TM1638_WRITE?MAIN
+
+?PR?_WRITE_DATA?MAIN           -----    -----
+  +--> ?PR?_WRITE_COM?MAIN
+  +--> ?PR?_TM1638_WRITE?MAIN
+
+?PR?READ_KEY?MAIN              0010H    0004H
+  +--> ?PR?_TM1638_WRITE?MAIN
+  +--> ?PR?TM1638_READ?MAIN
+
+?PR?_WRITE_ALLLED?MAIN         -----    -----
+  +--> ?PR?_WRITE_DATA?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  TM1638_test (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:015BH         SEGMENT       ?C_C51STARTUP
+  I:0014H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:015EH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0000H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:015BH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         92
+  C:015BH         LINE#         99
+  C:015DH         LINE#         100
+  C:015EH         LINE#         101
+  C:015FH         LINE#         102
+  C:0161H         LINE#         151
+  C:0164H         LINE#         155
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2010  21:41:40  PAGE 3
+
+
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:00B0H         PUBLIC        _Write_allLED
+  D:0090H         PUBLIC        P1
+  C:0133H         PUBLIC        _Write_DATA
+  C:00E3H         PUBLIC        init_TM1638
+  C:0003H         PUBLIC        main
+  C:005EH         PUBLIC        Read_key
+  C:014BH         PUBLIC        tab
+  C:0167H         PUBLIC        _Write_COM
+  D:0008H         PUBLIC        num
+  C:011BH         PUBLIC        TM1638_Read
+  B:0090H.1       PUBLIC        CLK
+  B:0090H.0       PUBLIC        DIO
+  C:0102H         PUBLIC        _TM1638_Write
+  B:0090H.2       PUBLIC        STB
+  -------         PROC          _TM1638_WRITE
+  D:0007H         SYMBOL        DATA
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:0102H         LINE#         20
+  C:0102H         LINE#         21
+  C:0102H         LINE#         23
+  C:0104H         LINE#         24
+  C:0104H         LINE#         25
+  C:0106H         LINE#         26
+  C:010AH         LINE#         27
+  C:010EH         LINE#         29
+  C:0110H         LINE#         30
+  C:0114H         LINE#         31
+  C:0116H         LINE#         32
+  C:011AH         LINE#         33
+  -------         ENDPROC       _TM1638_WRITE
+  -------         PROC          TM1638_READ
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0007H         SYMBOL        temp
+  -------         ENDDO         
+  C:011BH         LINE#         34
+  C:011BH         LINE#         35
+  C:011BH         LINE#         37
+  C:011DH         LINE#         38
+  C:011FH         LINE#         39
+  C:0120H         LINE#         40
+  C:0120H         LINE#         41
+  C:0124H         LINE#         42
+  C:0126H         LINE#         43
+  C:0129H         LINE#         44
+  C:012CH         LINE#         45
+  C:012EH         LINE#         46
+  C:0132H         LINE#         47
+  C:0132H         LINE#         48
+  -------         ENDPROC       TM1638_READ
+  -------         PROC          _WRITE_COM
+  D:0007H         SYMBOL        cmd
+  C:0167H         LINE#         49
+  C:0167H         LINE#         50
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2010  21:41:40  PAGE 4
+
+
+  C:0167H         LINE#         51
+  C:0169H         LINE#         52
+  C:016CH         LINE#         53
+  C:016EH         LINE#         54
+  -------         ENDPROC       _WRITE_COM
+  -------         PROC          READ_KEY
+  -------         DO            
+  D:0010H         SYMBOL        c
+  D:0004H         SYMBOL        i
+  D:0005H         SYMBOL        key_value
+  -------         ENDDO         
+  C:005EH         LINE#         55
+  C:005EH         LINE#         56
+  C:005EH         LINE#         57
+  C:0060H         LINE#         58
+  C:0062H         LINE#         59
+  C:0067H         LINE#         60
+  C:0069H         LINE#         61
+  C:0076H         LINE#         62
+  C:0078H         LINE#         63
+  C:007AH         LINE#         64
+  C:008FH         LINE#         65
+  C:0091H         LINE#         66
+  C:00A9H         LINE#         67
+  C:00ADH         LINE#         68
+  C:00AFH         LINE#         69
+  -------         ENDPROC       READ_KEY
+  -------         PROC          _WRITE_DATA
+  D:0004H         SYMBOL        add
+  D:0005H         SYMBOL        DATA
+  C:0133H         LINE#         70
+  C:0135H         LINE#         71
+  C:0135H         LINE#         72
+  C:013AH         LINE#         73
+  C:013CH         LINE#         74
+  C:0143H         LINE#         75
+  C:0148H         LINE#         76
+  C:014AH         LINE#         77
+  -------         ENDPROC       _WRITE_DATA
+  -------         PROC          _WRITE_ALLLED
+  D:0003H         SYMBOL        LED_flag
+  -------         DO            
+  D:0002H         SYMBOL        i
+  -------         ENDDO         
+  C:00B0H         LINE#         86
+  C:00B2H         LINE#         87
+  C:00B2H         LINE#         89
+  C:00B4H         LINE#         90
+  C:00B4H         LINE#         91
+  C:00CBH         LINE#         93
+  C:00D4H         LINE#         95
+  C:00DEH         LINE#         96
+  C:00E2H         LINE#         97
+  -------         ENDPROC       _WRITE_ALLLED
+  -------         PROC          INIT_TM1638
+  -------         DO            
+  D:0005H         SYMBOL        i
+BL51 BANKED LINKER/LOCATER V6.22                                                      12/05/2010  21:41:40  PAGE 5
+
+
+  -------         ENDDO         
+  C:00E3H         LINE#         100
+  C:00E3H         LINE#         101
+  C:00E3H         LINE#         103
+  C:00E8H         LINE#         104
+  C:00EDH         LINE#         105
+  C:00EFH         LINE#         106
+  C:00F4H         LINE#         108
+  C:00F6H         LINE#         109
+  C:00FFH         LINE#         110
+  C:0101H         LINE#         111
+  -------         ENDPROC       INIT_TM1638
+  -------         PROC          MAIN
+  -------         DO            
+  D:0001H         SYMBOL        i
+  -------         ENDDO         
+  C:0003H         LINE#         8
+  C:0003H         LINE#         9
+  C:0003H         LINE#         11
+  C:0006H         LINE#         12
+  C:0008H         LINE#         13
+  C:0019H         LINE#         15
+  C:0019H         LINE#         16
+  C:0019H         LINE#         17
+  C:001EH         LINE#         18
+  C:0024H         LINE#         19
+  C:0024H         LINE#         20
+  C:0029H         LINE#         21
+  C:0030H         LINE#         22
+  C:003AH         LINE#         23
+  C:003CH         LINE#         24
+  C:004DH         LINE#         25
+  C:005CH         LINE#         26
+  C:005CH         LINE#         27
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=21.0 xdata=0 code=367
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

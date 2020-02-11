@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Project:</h2>
+E:\网上购买的产品资料\网上购买的（数码管模块及并口下载器)\TM1638_test\TM1638_test\51\TM1638测试程序_单个模块\TM1638_test.uvproj
+Project File Date:  11/07/2010
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+linking...
+Program Size: data=21.0 xdata=0 code=367
+creating hex file from "TM1638_test"...
+"TM1638_test" - 0 Error(s), 0 Warning(s).
