@@ -21,7 +21,7 @@ void key_scan(u8 KeyDown[]) {
 		//memset(KeyDown, 0, 480);
 		for (i = 0; i < 60; ++i)
 				KeyDown[i] = 0;
-		GPIOB->ODR &= 0xff05; // pb1,3,4,5,6,7=0
+		GPIOB->ODR &= 0xff05; // pb1,3,4,5,6,7=0 
 		delay_us(1);
 		if ((GPIOA->IDR & 0x03ff) != 0x03ff) {
 				delay_ms(6);
