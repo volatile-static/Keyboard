@@ -2,6 +2,8 @@
 ![stars](https://img.shields.io/github/stars/volatile-static/Keyboard)
 ![GitHub language count](https://img.shields.io/github/languages/count/volatile-static/Keyboard)
 ![GitHub repo size](https://img.shields.io/github/repo-size/volatile-static/Keyboard?style=plastic)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/volatile-static/Keyboard.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/volatile-static/Keyboard/alerts/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/6559d1bf440743719f5ea4676a774c0d)](https://www.codacy.com/manual/volatile-static/Keyboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=volatile-static/Keyboard&amp;utm_campaign=Badge_Grade)
 ![GitHub last commit](https://img.shields.io/github/last-commit/volatile-static/Keyboard?style=flat-square)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/volatile-static/Keyboard?color=lime)
 ![GitHub forks](https://img.shields.io/github/forks/volatile-static/Keyboard?color=red&style=social)
