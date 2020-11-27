@@ -1,0 +1,24 @@
+//module Fulladder(
+//                  input c, a,b,
+//						output s,o
+//					  )
+//					  assign s=c^(a^b);
+//					  assign o=(~(a^b)&b)|((a^b)&c);
+//endmodule
+//
+//module Fulladder_4bit(
+//                       input c,
+//                       input [3:0]a,b,
+//							  output [3:0]s,
+//							  output o
+//							 )
+//							 
+//							 
+module Part5(
+             input [15:0] SW,
+             output [0:6] HEX7,HEX6,HEX5,HEX4,HEX2,HEX1,HEX0
+				 );
+				 wire [0:6] H; 
+				  Part4  p1({1'b0,SW[11:8],SW[3:0]},,,HEX6,HEX4,H,HEX0);//0要标记位宽
+				  Part4  p2({H[5],SW[15:12],SW[7:4]},,,HEX7,HEX5,HEX2,HEX1);
+endmodule

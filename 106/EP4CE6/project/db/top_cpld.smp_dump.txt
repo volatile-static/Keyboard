@@ -1,0 +1,24 @@
+
+State Machine - |top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus|curr_state
+Name curr_state.BUS_READ curr_state.BUS_SEND curr_state.BUS_IDEL 
+curr_state.BUS_IDEL 0 0 0 
+curr_state.BUS_SEND 0 1 1 
+curr_state.BUS_READ 1 0 1 
+
+State Machine - |top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus|ps2_rx:receiver|curr_state
+Name curr_state.ACK curr_state.STOP curr_state.PARITY curr_state.DATA curr_state.START curr_state.IDEL 
+curr_state.IDEL 0 0 0 0 0 0 
+curr_state.START 0 0 0 0 1 1 
+curr_state.DATA 0 0 0 1 0 1 
+curr_state.PARITY 0 0 1 0 0 1 
+curr_state.STOP 0 1 0 0 0 1 
+curr_state.ACK 1 0 0 0 0 1 
+
+State Machine - |top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus|ps2_tx:transmitter|curr_state
+Name curr_state.DELAY curr_state.STOP curr_state.PARITY curr_state.DATA curr_state.START curr_state.IDEL 
+curr_state.DELAY 0 0 0 0 0 0 
+curr_state.START 1 0 0 0 1 0 
+curr_state.DATA 1 0 0 1 0 0 
+curr_state.PARITY 1 0 1 0 0 0 
+curr_state.STOP 1 1 0 0 0 0 
+curr_state.IDEL 1 0 0 0 0 1 

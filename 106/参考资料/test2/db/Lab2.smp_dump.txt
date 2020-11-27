@@ -1,0 +1,9 @@
+
+State Machine - |Part5|keyboard:kbd|curr_state
+Name curr_state.idel curr_state.delay curr_state.stop curr_state.parity curr_state.data curr_state.start 
+curr_state.idel 0 0 0 0 0 0 
+curr_state.start 1 0 0 0 0 1 
+curr_state.data 1 0 0 0 1 0 
+curr_state.parity 1 0 0 1 0 0 
+curr_state.stop 1 0 1 0 0 0 
+curr_state.delay 1 1 0 0 0 0 

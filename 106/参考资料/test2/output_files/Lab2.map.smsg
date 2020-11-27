@@ -1,0 +1,5 @@
+Info (10281): Verilog HDL Declaration information at Part2.v(3): object "a" differs only in case from object "A" in the same scope File: E:/STUDY/QuartusPrime/test2/Part2.v Line: 3
+Info (10281): Verilog HDL Declaration information at Part2.v(4): object "m" differs only in case from object "M" in the same scope File: E:/STUDY/QuartusPrime/test2/Part2.v Line: 4
+Info (10281): Verilog HDL Declaration information at Part4.v(7): object "c" differs only in case from object "C" in the same scope File: E:/STUDY/QuartusPrime/test2/Part4.v Line: 7
+Info (10281): Verilog HDL Declaration information at Part4.v(10): object "m" differs only in case from object "M" in the same scope File: E:/STUDY/QuartusPrime/test2/Part4.v Line: 10
+Info (10281): Verilog HDL Declaration information at Part4.v(7): object "b" differs only in case from object "B" in the same scope File: E:/STUDY/QuartusPrime/test2/Part4.v Line: 7

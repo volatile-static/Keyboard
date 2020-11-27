@@ -1,0 +1,65 @@
+--sld_ela_trigger_flow_sel CONDITION_WIDTH=1 POST_FILL_COUNT_WIDTH=10 RESOURCE_WIDTH=1 STATE_WIDTH=2 TRIGGER_FLOW_ENTITY_NAME="sld_reserved_Lab2_auto_signaltap_0_flow_mgr_c90c" acq_clk condition_met config_clk config_enable config_in config_out current_resource_value current_state final_trigger post_fill_count reset segment_trigger start_acq use_post_fill_count
+--VERSION_BEGIN 20.1 cbx_mgl 2020:06:05:12:11:10:SJ cbx_sld_ela_trigger_flow_sel 2020:06:05:12:04:51:SJ  VERSION_END
+
+
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+--  Your use of Intel Corporation's design tools, logic functions 
+--  and other software and tools, and any partner logic 
+--  functions, and any output files from any of the foregoing 
+--  (including device programming or simulation files), and any 
+--  associated documentation or information are expressly subject 
+--  to the terms and conditions of the Intel Program License 
+--  Subscription Agreement, the Intel Quartus Prime License Agreement,
+--  the Intel FPGA IP License Agreement, or other applicable license
+--  agreement, including, without limitation, that your use is for
+--  the sole purpose of programming logic devices manufactured by
+--  Intel and sold by Intel or its authorized distributors.  Please
+--  refer to the applicable agreement for further details, at
+--  https://fpgasoftware.intel.com/eula.
+
+
+FUNCTION sld_reserved_Lab2_auto_signaltap_0_flow_mgr_c90c (acq_clk, condition_met[0..0], config_clk, config_enable, config_in, reset, start_acq)
+RETURNS ( config_out, current_resource_value[0..0], current_state[1..0], final_trigger, post_fill_count[9..0], segment_trigger, start_store, stop_store, use_post_fill_count);
+
+--synthesis_resources = sld_reserved_Lab2_auto_signaltap_0_flow_mgr_c90c 1 
+SUBDESIGN sld_ela_trigger_flow_sel_a931
+( 
+	acq_clk	:	input;
+	condition_met[0..0]	:	input;
+	config_clk	:	input;
+	config_enable	:	input;
+	config_in	:	input;
+	config_out	:	output;
+	current_resource_value[0..0]	:	output;
+	current_state[1..0]	:	output;
+	final_trigger	:	output;
+	post_fill_count[9..0]	:	output;
+	reset	:	input;
+	segment_trigger	:	output;
+	start_acq	:	input;
+	start_store	:	output;
+	stop_store	:	output;
+	use_post_fill_count	:	output;
+) 
+VARIABLE 
+	mgl_prim1 : sld_reserved_Lab2_auto_signaltap_0_flow_mgr_c90c;
+
+BEGIN 
+	mgl_prim1.acq_clk = acq_clk;
+	mgl_prim1.condition_met[] = condition_met[];
+	mgl_prim1.config_clk = config_clk;
+	mgl_prim1.config_enable = config_enable;
+	mgl_prim1.config_in = config_in;
+	mgl_prim1.reset = reset;
+	mgl_prim1.start_acq = start_acq;
+	config_out = mgl_prim1.config_out;
+	current_resource_value[] = mgl_prim1.current_resource_value[];
+	current_state[] = mgl_prim1.current_state[];
+	final_trigger = mgl_prim1.final_trigger;
+	post_fill_count[] = mgl_prim1.post_fill_count[];
+	segment_trigger = mgl_prim1.segment_trigger;
+	start_store = mgl_prim1.start_store;
+	stop_store = mgl_prim1.stop_store;
+	use_post_fill_count = mgl_prim1.use_post_fill_count;
+END;
+--VALID FILE

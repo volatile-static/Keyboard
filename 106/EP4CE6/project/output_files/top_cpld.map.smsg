@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at ps2_tx.v(2): object "start" differs only in case from object "START" in the same scope File: D:/106/EP4CE6/source/ps2_tx.v Line: 2
+Info (10281): Verilog HDL Declaration information at ps2_rx.v(2): object "start" differs only in case from object "START" in the same scope File: D:/106/EP4CE6/source/ps2_rx.v Line: 2

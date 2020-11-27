@@ -1,0 +1,203 @@
+|top_cpld
+clk => clk.IN2
+rst_n => rst_n.IN1
+led <= led_r.DB_MAX_OUTPUT_PORT_TYPE
+PS2_CLK <> keyboard_ps2:comb_203.PS2_CLK
+PS2_DAT <> keyboard_ps2:comb_203.PS2_DAT
+
+
+|top_cpld|key_jitter:key_jitter_inst
+clk => key_valid~reg0.CLK
+clk => key_valid_r2.CLK
+clk => key_valid_r1.CLK
+clk => key_valid_r0.CLK
+clk => key_down_check[0].CLK
+clk => key_down_check[1].CLK
+clk => key_down_check[2].CLK
+clk => key_down_check[3].CLK
+clk => cnt0[0].CLK
+clk => cnt0[1].CLK
+clk => cnt0[2].CLK
+clk => cnt0[3].CLK
+clk => cnt0[4].CLK
+clk => cnt0[5].CLK
+clk => cnt0[6].CLK
+clk => cnt0[7].CLK
+clk => cnt0[8].CLK
+clk => cnt0[9].CLK
+clk => cnt0[10].CLK
+clk => cnt0[11].CLK
+clk => cnt0[12].CLK
+clk => cnt0[13].CLK
+clk => cnt0[14].CLK
+clk => cnt0[15].CLK
+clk => cnt0[16].CLK
+clk => cnt0[17].CLK
+clk => cnt0[18].CLK
+clk => cnt0[19].CLK
+key_n => key_down_check[0].DATAIN
+key_valid <= key_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_cpld|keyboard_ps2:comb_203
+clock_50 => clock_50.IN1
+reset => reset.IN1
+num_lock <= <GND>
+scroll_lock <= <GND>
+caps_lock <= <GND>
+PS2_CLK <> ps2_bus:ps2_bus.PS2_CLK
+PS2_DAT <> ps2_bus:ps2_bus.PS2_DAT
+
+
+|top_cpld|keyboard_ps2:comb_203|divider:clk_gen
+clk_in => out.CLK
+clk_in => counter[0].CLK
+clk_in => counter[1].CLK
+clk_in => counter[2].CLK
+clk_in => counter[3].CLK
+clk_in => counter[4].CLK
+clk_in => counter[5].CLK
+clk_in => counter[6].CLK
+clk_in => counter[7].CLK
+clk_in => counter[8].CLK
+clk_in => counter[9].CLK
+clk_in => counter[10].CLK
+clk_in => counter[11].CLK
+clk_in => counter[12].CLK
+clk_in => counter[13].CLK
+clk_in => counter[14].CLK
+clk_in => counter[15].CLK
+clk_in => counter[16].CLK
+clk_in => counter[17].CLK
+clk_in => counter[18].CLK
+clk_in => counter[19].CLK
+clk_in => counter[20].CLK
+clk_in => counter[21].CLK
+clk_in => counter[22].CLK
+clk_in => counter[23].CLK
+clk_in => counter[24].CLK
+clk_in => counter[25].CLK
+clk_in => counter[26].CLK
+clk_in => counter[27].CLK
+clk_in => counter[28].CLK
+clk_in => counter[29].CLK
+clk_in => counter[30].CLK
+clk_in => counter[31].CLK
+clk_out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus
+clock_quarter => clock_quarter.IN2
+reset => reset.IN2
+enable => next_state.DATAA
+enable => next_state.DATAA
+tx_data[0] => tx_data[0].IN1
+tx_data[1] => tx_data[1].IN1
+tx_data[2] => tx_data[2].IN1
+tx_data[3] => tx_data[3].IN1
+tx_data[4] => tx_data[4].IN1
+tx_data[5] => tx_data[5].IN1
+tx_data[6] => tx_data[6].IN1
+tx_data[7] => tx_data[7].IN1
+rx_data[0] <= ps2_rx:receiver.buffer
+rx_data[1] <= ps2_rx:receiver.buffer
+rx_data[2] <= ps2_rx:receiver.buffer
+rx_data[3] <= ps2_rx:receiver.buffer
+rx_data[4] <= ps2_rx:receiver.buffer
+rx_data[5] <= ps2_rx:receiver.buffer
+rx_data[6] <= ps2_rx:receiver.buffer
+rx_data[7] <= ps2_rx:receiver.buffer
+tx_ready <= tx_ready.DB_MAX_OUTPUT_PORT_TYPE
+tx_faild <= ps2_tx:transmitter.abort
+rx_complete <= rx_complete.DB_MAX_OUTPUT_PORT_TYPE
+PS2_CLK <> ps2_tx:transmitter.PS2_CLK
+PS2_CLK <> ps2_rx:receiver.PS2_CLK
+PS2_DAT <> ps2_tx:transmitter.PS2_DAT
+PS2_DAT <> ps2_rx:receiver.PS2_DAT
+
+
+|top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus|ps2_tx:transmitter
+start => tx_en.CLK
+clock_quarter => byte_cnt[0].CLK
+clock_quarter => byte_cnt[1].CLK
+clock_quarter => byte_cnt[2].CLK
+clock_quarter => bit_cnt[0].CLK
+clock_quarter => bit_cnt[1].CLK
+clock_quarter => abort~reg0.CLK
+clock_quarter => curr_state~1.DATAIN
+reset => curr_state~3.DATAIN
+buffer[0] => Mux0.IN7
+buffer[0] => WideXor0.IN0
+buffer[1] => Mux0.IN6
+buffer[1] => WideXor0.IN1
+buffer[2] => Mux0.IN5
+buffer[2] => WideXor0.IN2
+buffer[3] => Mux0.IN4
+buffer[3] => WideXor0.IN3
+buffer[4] => Mux0.IN3
+buffer[4] => WideXor0.IN4
+buffer[5] => Mux0.IN2
+buffer[5] => WideXor0.IN5
+buffer[6] => Mux0.IN1
+buffer[6] => WideXor0.IN6
+buffer[7] => Mux0.IN0
+buffer[7] => WideXor0.IN7
+ready <= ready.DB_MAX_OUTPUT_PORT_TYPE
+finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
+abort <= abort~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PS2_CLK <> PS2_CLK
+PS2_DAT <> PS2_DAT
+
+
+|top_cpld|keyboard_ps2:comb_203|ps2_bus:ps2_bus|ps2_rx:receiver
+clock_quarter => wait_cnt[0].CLK
+clock_quarter => wait_cnt[1].CLK
+clock_quarter => wait_cnt[2].CLK
+clock_quarter => wait_cnt[3].CLK
+clock_quarter => wait_cnt[4].CLK
+clock_quarter => wait_cnt[5].CLK
+clock_quarter => wait_cnt[6].CLK
+clock_quarter => wait_cnt[7].CLK
+clock_quarter => faild~reg0.CLK
+clock_quarter => buffer[0]~reg0.CLK
+clock_quarter => buffer[1]~reg0.CLK
+clock_quarter => buffer[2]~reg0.CLK
+clock_quarter => buffer[3]~reg0.CLK
+clock_quarter => buffer[4]~reg0.CLK
+clock_quarter => buffer[5]~reg0.CLK
+clock_quarter => buffer[6]~reg0.CLK
+clock_quarter => buffer[7]~reg0.CLK
+clock_quarter => byte_cnt[0].CLK
+clock_quarter => byte_cnt[1].CLK
+clock_quarter => byte_cnt[2].CLK
+clock_quarter => bit_cnt[0].CLK
+clock_quarter => bit_cnt[1].CLK
+clock_quarter => dat_sync.CLK
+clock_quarter => clk_sync.CLK
+clock_quarter => curr_state~1.DATAIN
+reset => buffer[0]~reg0.ACLR
+reset => buffer[1]~reg0.ACLR
+reset => buffer[2]~reg0.ACLR
+reset => buffer[3]~reg0.ACLR
+reset => buffer[4]~reg0.ACLR
+reset => buffer[5]~reg0.ACLR
+reset => buffer[6]~reg0.ACLR
+reset => buffer[7]~reg0.ACLR
+reset => curr_state~3.DATAIN
+start => Selector2.IN3
+start => Selector1.IN1
+ready <= ready.DB_MAX_OUTPUT_PORT_TYPE
+finish <= finish.DB_MAX_OUTPUT_PORT_TYPE
+faild <= faild~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[0] <= buffer[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[1] <= buffer[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[2] <= buffer[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[3] <= buffer[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[4] <= buffer[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[5] <= buffer[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[6] <= buffer[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+buffer[7] <= buffer[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+PS2_CLK <> PS2_CLK
+PS2_DAT <> PS2_DAT
+
+

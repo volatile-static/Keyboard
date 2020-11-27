@@ -1,0 +1,8 @@
+module ps2_rx(
+  input clock, clk_in, dat_in,
+  output clk_out, dat_out
+);
+
+
+
+endmodule
