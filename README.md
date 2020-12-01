@@ -55,5 +55,4 @@ https://github.com/DengQilong/stm32-usb-game-controller
 > 资料中有数据手册、例程、HID键值、焊接测试代码、AD封装等
 
 # 联系方式
-  - 电脑QQ： tencent://message/?Menu=yes&uin=1043064987&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45
-  - [手机QQ](http://wpa.qq.com/msgrd?v=3&uin=1043064987&site=qq&menu=yes)
+  - [QQ](http://wpa.qq.com/msgrd?v=3&uin=1043064987&site=qq&menu=yes) ：1043064987
