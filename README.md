@@ -30,8 +30,30 @@
   82键
     带USB集线器
  > AIP1638
+
+ # 选型手册
+| 键数 | 主控 | 协议 | RGB | 扫描方式 | 其他 |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 104 | EP4CE6E22 | USB + PS/2 | 一半 | 全键无冲 | 尚未完工 |
+| 17 | nRF52810QC | BLE | 全 | TCA8418 | 18650供电 |
+| 4 | STM32F103C8 | USB | 无 | GPIO | |
+| 82 | STM32F103C8 | USB | 无 | AIP1638 | 带USB-hub |
+
 # 如何使用
 1. 打样PCB
 2. 焊上元件
 3. 烧录固件
+
+# 参考
+https://github.com/DengQilong/stm32-usb-game-controller
+
+# 重要的话说三遍
+  - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
+  - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
+  - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
+  ![百度云](百度云.png)
 > 资料中有数据手册、例程、HID键值、焊接测试代码、AD封装等
+
+# 联系方式
+  - [电脑QQ](tencent://message/?Menu=yes&uin=1043064987&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45)
+  - [手机QQ](http://wpa.qq.com/msgrd?v=3&uin=1043064987&site=qq&menu=yes)

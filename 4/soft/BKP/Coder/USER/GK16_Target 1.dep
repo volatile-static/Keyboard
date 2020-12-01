@@ -1,347 +1,0 @@
-Dependencies for Project 'GK16', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_stm32f10x_md.s)(0x532BB228)(--cpu Cortex-M3 -g --apcs=interwork -I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include--list ..\obj\startup_stm32f10x_md.lst --xref -o ..\obj\startup_stm32f10x_md.o --depend ..\obj\startup_stm32f10x_md.d)
-F (.\GK16.c)(0x55375E26)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\gk16.o --omf_browse ..\obj\gk16.crf --depend ..\obj\gk16.d)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\SYSTEM\usart\usart.h)(0x5323CAD6)
-I (D:\MDK5.10\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
-I (..\SYSTEM\delay\delay.h)(0x50BF2542)
-I (..\HARDWARE\LED\led.h)(0x5524AAE0)
-I (..\HARDWARE\KEY\key.h)(0x5536343F)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)
-I (..\HARDWARE\TIMER\timer.h)(0x552FA365)
-F (..\SYSTEM\delay\delay.c)(0x5290AD52)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
-I (..\SYSTEM\delay\delay.h)(0x50BF2542)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-F (..\SYSTEM\sys\sys.c)(0x52BC4394)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-F (..\SYSTEM\usart\usart.c)(0x532C1350)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
-I (..\SYSTEM\usart\usart.h)(0x5323CAD6)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\ARMCC\include\stdio.h)(0x52FDD27E)
-F (..\HARDWARE\LED\led.c)(0x5524AAE2)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
-I (..\HARDWARE\LED\led.h)(0x5524AAE0)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-F (..\HARDWARE\KEY\key.c)(0x553638D8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
-I (..\HARDWARE\KEY\key.h)(0x5536343F)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\SYSTEM\delay\delay.h)(0x50BF2542)
-F (..\HARDWARE\TIMER\timer.c)(0x552FB318)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
-I (..\HARDWARE\TIMER\timer.h)(0x552FA365)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\LED\led.h)(0x5524AAE0)
-F (..\HARDWARE\USB\LIB\usb_core.c)(0x5324104C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_core.o --omf_browse ..\obj\usb_core.crf --depend ..\obj\usb_core.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\LIB\usb_init.c)(0x50FD2624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_init.o --omf_browse ..\obj\usb_init.crf --depend ..\obj\usb_init.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\LIB\usb_int.c)(0x50FD2624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_int.o --omf_browse ..\obj\usb_int.crf --depend ..\obj\usb_int.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\LIB\usb_mem.c)(0x50FD2624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_mem.o --omf_browse ..\obj\usb_mem.crf --depend ..\obj\usb_mem.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\LIB\usb_regs.c)(0x50FD2624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_regs.o --omf_browse ..\obj\usb_regs.crf --depend ..\obj\usb_regs.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\LIB\usb_sil.c)(0x50FD2624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_sil.o --omf_browse ..\obj\usb_sil.crf --depend ..\obj\usb_sil.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-F (..\HARDWARE\USB\CONFIG\hw_config.c)(0x552FBBD7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\hw_config.o --omf_browse ..\obj\hw_config.crf --depend ..\obj\hw_config.d)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_desc.h)(0x552FBA6F)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)
-I (..\SYSTEM\sys\sys.h)(0x52C02CEB)
-F (..\HARDWARE\USB\CONFIG\stm32_it.c)(0x5324494C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\stm32_it.o --omf_browse ..\obj\stm32_it.crf --depend ..\obj\stm32_it.d)
-I (..\HARDWARE\USB\CONFIG\stm32_it.h)(0x50FD2616)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\CONFIG\usb_istr.h)(0x50FD2616)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)
-F (..\HARDWARE\USB\CONFIG\usb_desc.c)(0x552FBBD7)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_desc.o --omf_browse ..\obj\usb_desc.crf --depend ..\obj\usb_desc.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_desc.h)(0x552FBA6F)
-F (..\HARDWARE\USB\CONFIG\usb_endp.c)(0x50FD2614)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_endp.o --omf_browse ..\obj\usb_endp.crf --depend ..\obj\usb_endp.d)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_istr.h)(0x50FD2616)
-F (..\HARDWARE\USB\CONFIG\usb_istr.c)(0x50FD2614)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_istr.o --omf_browse ..\obj\usb_istr.crf --depend ..\obj\usb_istr.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_prop.h)(0x50FD2614)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)
-I (..\HARDWARE\USB\CONFIG\usb_istr.h)(0x50FD2616)
-F (..\HARDWARE\USB\CONFIG\usb_prop.c)(0x552BA801)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_prop.o --omf_browse ..\obj\usb_prop.crf --depend ..\obj\usb_prop.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_prop.h)(0x50FD2614)
-I (..\HARDWARE\USB\CONFIG\usb_desc.h)(0x552FBA6F)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)
-F (..\HARDWARE\USB\CONFIG\usb_pwr.c)(0x53243624)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I..\SYSTEM\delay -I..\SYSTEM\sys -I..\SYSTEM\usart -I..\HARDWARE\LED -I..\HARDWARE\KEY -I..\HARDWARE\USB\LIB -I..\HARDWARE\USB\CONFIG -I..\HARDWARE\TIMER-I D:\MDK5.10\ARM\RV31\INC-I D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include-I D:\MDK5.10\ARM\PACK\Keil\STM32F1xx_DFP\1.0.4\Device\Include-DSTM32F10X_MD -DSTM32F10X_MD -o ..\obj\usb_pwr.o --omf_browse ..\obj\usb_pwr.crf --depend ..\obj\usb_pwr.d)
-I (..\HARDWARE\USB\LIB\usb_lib.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\hw_config.h)(0x552BA801)
-I (..\HARDWARE\USB\CONFIG\platform_config.h)(0x53241FAF)
-I (..\SYSTEM\sys\stm32f10x.h)(0x4F1E2E3C)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h)(0x512C1E62)
-I (D:\MDK5.10\ARM\ARMCC\include\stdint.h)(0x52FDD27E)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h)(0x51BA6374)
-I (D:\MDK5.10\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h)(0x512C1E62)
-I (..\SYSTEM\sys\system_stm32f10x.h)(0x4F1E2E3C)
-I (..\HARDWARE\USB\LIB\usb_type.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_conf.h)(0x50FD2616)
-I (..\HARDWARE\USB\LIB\usb_regs.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_def.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_core.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_init.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_sil.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_mem.h)(0x50FD2624)
-I (..\HARDWARE\USB\LIB\usb_int.h)(0x50FD2624)
-I (..\HARDWARE\USB\CONFIG\usb_pwr.h)(0x50FD2616)

@@ -56,13 +56,17 @@ dkms.conf
 *.lst
 *.axf
 
+db
 .vs/
 History/
 Objects/
 __Previews/
 *.*Previews
 *.bak
+*.*bak
 *.doer
+*.hp
+*.hlK
 MagnetSensor/mdk/debug/
 
 # Byte-compiled / optimized / DLL files

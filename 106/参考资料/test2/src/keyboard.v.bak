@@ -1,7 +1,0 @@
-module keyboard(
-  inout PS2_CLK, PS2_DAT,
-  input CLK_50
-);
-
-
-endmodule
