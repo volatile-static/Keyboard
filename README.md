@@ -21,11 +21,11 @@
 [源码](https://github.com/volatile-static/Keyboard/tree/master/17/v2/soft/code)
 
 
-![光效](https://github.com/volatile-static/Keyboard/blob/master/17/光效.gif)
+![光效](https://github.com/volatile-static/Keyboard/blob/master/17/%E5%85%89%E6%95%88.gif)
 # 4
 **码农专属键盘，高效搬砖必备**
 > 由STM32F103的USB摇杆例程修改而来。
- ![效果图](https://github.com/volatile-static/Keyboard/blob/master/4/1579656034825.gif)
+ ![效果图](https://github.com/volatile-static/Keyboard/blob/master/4/%E7%A0%81%E5%86%9C.gif)
  # 82
   82键
     带USB集线器
@@ -55,5 +55,5 @@ https://github.com/DengQilong/stm32-usb-game-controller
 > 资料中有数据手册、例程、HID键值、焊接测试代码、AD封装等
 
 # 联系方式
-  - [电脑QQ](tencent://message/?Menu=yes&uin=1043064987&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45)
+  - 电脑QQ： tencent://message/?Menu=yes&uin=1043064987&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45
   - [手机QQ](http://wpa.qq.com/msgrd?v=3&uin=1043064987&site=qq&menu=yes)
