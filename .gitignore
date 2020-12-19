@@ -56,8 +56,17 @@ dkms.conf
 *.lst
 *.axf
 
+*.bak
+*.qws
+*.map
+*.pof
 db
-.vs/
+output_files
+incremental_db
+.vs
+/.vs/
+/.vs
+
 History/
 Objects/
 __Previews/

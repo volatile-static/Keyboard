@@ -1,0 +1,305 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 21:28:21  December 13, 2020
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		kbd104_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "21:28:21  DECEMBER 13, 2020"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name DEVICE_FILTER_PACKAGE "ANY QFP"
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name VERILOG_FILE source/uart_tx.v
+set_global_assignment -name VERILOG_FILE source/top.v
+set_global_assignment -name VERILOG_FILE source/scan_led.v
+set_global_assignment -name VERILOG_FILE source/scan_key.v
+set_global_assignment -name VERILOG_FILE source/reset_controller.v
+set_global_assignment -name VERILOG_FILE source/ps2_tx.v
+set_global_assignment -name VERILOG_FILE source/ps2_rx.v
+set_global_assignment -name VERILOG_FILE source/ps2_bus.v
+set_global_assignment -name VERILOG_FILE source/keyboard_send.v
+set_global_assignment -name VERILOG_FILE source/keyboard_ps2.v
+set_global_assignment -name VERILOG_FILE source/key_jitter.v
+set_global_assignment -name VERILOG_FILE source/divider.v
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name FLOW_ENABLE_RTL_VIEWER ON
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name SMART_RECOMPILE ON
+set_global_assignment -name FLOW_ENABLE_IO_ASSIGNMENT_ANALYSIS ON
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to KEY_Fn
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLK_50
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to TXD
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ROW[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PS2_DAT
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to PS2_CLK
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_R6
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[20]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[21]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[22]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[23]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[24]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[25]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[26]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[27]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[28]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[29]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[30]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[31]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[32]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[33]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K[34]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_A[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to COL[10]
+set_location_assignment PIN_28 -to COL[14]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to KEY_Fn
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_A
+set_location_assignment PIN_1 -to TXD
+set_location_assignment PIN_143 -to PS2_CLK
+set_location_assignment PIN_144 -to PS2_DAT
+set_location_assignment PIN_74 -to LED_R6
+set_location_assignment PIN_68 -to KEY_Fn
+set_location_assignment PIN_23 -to CLK_50
+set_location_assignment PIN_115 -to LED_A[0]
+set_location_assignment PIN_121 -to LED_A[1]
+set_location_assignment PIN_120 -to LED_A[2]
+set_location_assignment PIN_42 -to LED_A[4]
+set_location_assignment PIN_43 -to LED_A[3]
+set_location_assignment PIN_44 -to LED_A[5]
+set_location_assignment PIN_114 -to ROW[0]
+set_location_assignment PIN_119 -to ROW[1]
+set_location_assignment PIN_3 -to ROW[2]
+set_location_assignment PIN_34 -to ROW[3]
+set_location_assignment PIN_38 -to ROW[4]
+set_location_assignment PIN_73 -to ROW[5]
+set_location_assignment PIN_85 -to COL[7]
+set_location_assignment PIN_86 -to COL[8]
+set_location_assignment PIN_87 -to COL[9]
+set_location_assignment PIN_98 -to COL[10]
+set_location_assignment PIN_84 -to COL[6]
+set_location_assignment PIN_99 -to COL[11]
+set_location_assignment PIN_100 -to COL[12]
+set_location_assignment PIN_142 -to COL[15]
+set_location_assignment PIN_60 -to COL[16]
+set_location_assignment PIN_64 -to COL[17]
+set_location_assignment PIN_141 -to COL[18]
+set_location_assignment PIN_65 -to COL[19]
+set_location_assignment PIN_59 -to COL[20]
+set_location_assignment PIN_67 -to COL[5]
+set_location_assignment PIN_72 -to COL[4]
+set_location_assignment PIN_71 -to COL[3]
+set_location_assignment PIN_70 -to COL[2]
+set_location_assignment PIN_69 -to COL[1]
+set_location_assignment PIN_66 -to COL[0]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[0]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[1]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[2]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[3]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[4]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[5]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[6]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[7]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[8]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[9]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[10]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[11]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[12]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[13]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[14]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[15]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[16]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[17]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[18]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[19]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL[20]
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to COL
+set_location_assignment PIN_126 -to LED_K[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LED_K
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_101 -to COL[13]
+set_location_assignment PIN_52 -to LED_K[34]
+set_location_assignment PIN_53 -to LED_K[33]
+set_location_assignment PIN_54 -to LED_K[32]
+set_location_assignment PIN_33 -to LED_K[31]
+set_location_assignment PIN_133 -to LED_K[30]
+set_location_assignment PIN_132 -to LED_K[29]
+set_location_assignment PIN_127 -to LED_K[28]
+set_location_assignment PIN_128 -to LED_K[27]
+set_location_assignment PIN_129 -to LED_K[26]
+set_location_assignment PIN_51 -to LED_K[25]
+set_location_assignment PIN_50 -to LED_K[24]
+set_location_assignment PIN_138 -to LED_K[15]
+set_location_assignment PIN_137 -to LED_K[22]
+set_location_assignment PIN_136 -to LED_K[20]
+set_location_assignment PIN_135 -to LED_K[14]
+set_location_assignment PIN_125 -to LED_K[3]
+set_location_assignment PIN_124 -to LED_K[4]
+set_location_assignment PIN_113 -to LED_K[5]
+set_location_assignment PIN_112 -to LED_K[6]
+set_location_assignment PIN_111 -to LED_K[7]
+set_location_assignment PIN_110 -to LED_K[9]
+set_location_assignment PIN_104 -to LED_K[8]
+set_location_assignment PIN_106 -to LED_K[11]
+set_location_assignment PIN_103 -to LED_K[13]
+set_location_assignment PIN_75 -to LED_K[1]
+set_location_assignment PIN_76 -to LED_K[2]
+set_location_assignment PIN_77 -to LED_K[10]
+set_location_assignment PIN_32 -to LED_K[17]
+set_location_assignment PIN_31 -to LED_K[18]
+set_location_assignment PIN_30 -to LED_K[19]
+set_location_assignment PIN_49 -to LED_K[23]
+set_location_assignment PIN_55 -to LED_K[21]
+set_location_assignment PIN_58 -to LED_K[16]
+set_location_assignment PIN_105 -to LED_K[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[34]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[33]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[32]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[31]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[30]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[29]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[28]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[27]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[26]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[25]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[24]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[23]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[22]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[21]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[20]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[19]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[18]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[17]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[16]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to LED_K[0]
+set_global_assignment -name VERILOG_FILE source/debug_log.v
+set_global_assignment -name VERILOG_FILE source/get_edge.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
