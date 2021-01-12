@@ -1,0 +1,127 @@
+-- Copyright (C) 2020  Intel Corporation. All rights reserved.
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and any partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement,
+-- the Intel FPGA IP License Agreement, or other applicable license
+-- agreement, including, without limitation, that your use is for
+-- the sole purpose of programming logic devices manufactured by
+-- Intel and sold by Intel or its authorized distributors.  Please
+-- refer to the applicable agreement for further details, at
+-- https://fpgasoftware.intel.com/eula.
+
+-- Quartus Prime generated Memory Initialization File (.mif)
+
+WIDTH=8;
+DEPTH=128;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	0    :   29;
+	1    :   3A;
+	2    :   3B;
+	3    :   3C;
+	4    :   3D;
+	5    :   3E;
+	6    :   3F;
+	7    :   40;
+	8    :   41;
+	9    :   42;
+	10   :   43;
+	11   :   44;
+	12   :   45;
+	13   :   46;
+	14   :   47;
+	15   :   48;
+	16   :   35;
+	17   :   1E;
+	18   :   1F;
+	19   :   20;
+	20   :   21;
+	21   :   22;
+	22   :   23;
+	23   :   24;
+	24   :   25;
+	25   :   26;
+	26   :   27;
+	27   :   2D;
+	28   :   2E;
+	29   :   2A;
+	30   :   49;
+	31   :   4A;
+	32   :   4B;
+	33   :   53;
+	34   :   54;
+	35   :   55;
+	36   :   56;
+	37   :   2B;
+	38   :   14;
+	39   :   1A;
+	40   :   08;
+	41   :   15;
+	42   :   17;
+	43   :   1C;
+	44   :   18;
+	45   :   0C;
+	46   :   12;
+	47   :   13;
+	48   :   2F;
+	49   :   30;
+	50   :   31;
+	51   :   4C;
+	52   :   4D;
+	53   :   4E;
+	54   :   5F;
+	55   :   60;
+	56   :   61;
+	57   :   57;
+	58   :   39;
+	59   :   04;
+	60   :   16;
+	61   :   07;
+	62   :   09;
+	63   :   0A;
+	64   :   0B;
+	65   :   0D;
+	66   :   0E;
+	67   :   0F;
+	68   :   33;
+	69   :   34;
+	70   :   28;
+	71   :   5C;
+	72   :   97;
+	73   :   5E;
+	74   :   00;
+	75   :   1D;
+	76   :   1B;
+	77   :   06;
+	78   :   19;
+	79   :   05;
+	80   :   11;
+	81   :   10;
+	82   :   36;
+	83   :   37;
+	84   :   38;
+	85   :   00;
+	86   :   52;
+	87   :   59;
+	88   :   5A;
+	89   :   5B;
+	[90..92]  :   00;
+	93   :   2C;
+	94   :   00;
+	95   :   65;
+	96   :   00;
+	97   :   50;
+	98   :   51;
+	99   :   4F;
+	100  :   62;
+	101  :   63;
+	102  :   58;
+	[103..127]  :   00;
+END;
