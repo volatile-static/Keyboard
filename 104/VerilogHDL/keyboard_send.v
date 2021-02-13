@@ -1,5 +1,5 @@
 module keyboard_send(
-	input clock, reset, row_sync,
+	input clock, reset, 
 	input[102:0] key_down,
 	output[7:0] key_event,
 	output on_event

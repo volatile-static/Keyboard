@@ -5,20 +5,20 @@ module ps2_rx #(DATA_TIMEOUT = 20) (
 	inout tri PS2_CLK, PS2_DAT
 );
 
-/*****************************************************************************
- *                           Parameter Declarations                          *
- *****************************************************************************/
+/*****************************************************************************\
+|*                           Parameter Declarations                          *|
+\*****************************************************************************/
 localparam 
-	IDEL   = 6'b000001,
-    START  = 6'b000010,
+	IDLE   = 6'b000001,
+	START  = 6'b000010,
 	DATA   = 6'b000100,
 	PARITY = 6'b001000,
 	STOP   = 6'b010000,
 	ACK    = 6'b100000;
 
-/*****************************************************************************
- *                           REG/WIRE Declarations                           *
- *****************************************************************************/
+/*****************************************************************************\
+|*                 Internal wires and registers Declarations                 *|
+\*****************************************************************************/
 
 reg[7:0] wait_cnt;
 reg[5:0] curr_state, next_state;
@@ -30,22 +30,22 @@ reg parity_read;
 wire bit_finish = bit_cnt == 2'b11;
 wire rx_timeout = wait_cnt > DATA_TIMEOUT;
 
-/*****************************************************************************
- *                            Combinational logic                            *
- *****************************************************************************/
+/*****************************************************************************\
+|*                            Combinational logic                            *|
+\*****************************************************************************/
 
 assign PS2_CLK = (^bit_cnt) ? 1'b0 : 1'bz;
 assign PS2_DAT = (curr_state == ACK && bit_cnt) ? 1'b0 : 1'bz;
  
-assign ready = curr_state == IDEL;
+assign ready = curr_state == IDLE;
 assign finish = rx_timeout || (bit_finish && curr_state == ACK);
 assign faild  = rx_timeout || (bit_finish && (
 	(curr_state == PARITY  && (^buffer) != dat_sync) |
 	(curr_state == STOP    && !dat_sync)));
 
-/*****************************************************************************
- *                             Sequential logic                              *
- *****************************************************************************/
+/*****************************************************************************\
+|*                             Sequential logic                              *|
+\*****************************************************************************/
 
 always @(posedge clock_quarter)
 	begin
@@ -54,7 +54,7 @@ always @(posedge clock_quarter)
 	end
 
 always @(posedge clock_quarter)
-	if (curr_state != IDEL && curr_state != START)
+	if (curr_state != IDLE && curr_state != START)
 		bit_cnt <= bit_cnt + 1;
 	else
 		bit_cnt <= 0;
@@ -84,27 +84,28 @@ always @(posedge clock_quarter)
 	else
 		wait_cnt <= wait_cnt + 1;
 
-/*****************************************************************************
- *                         Finite State Machine(s)                           *
- *****************************************************************************/
+/*****************************************************************************\
+|*                         Finite State Machine(s)                           *|
+\*****************************************************************************/
+
 always @ (posedge clock_quarter, posedge reset)
 	if (reset)
-		curr_state = IDEL; 
+		curr_state = IDLE; 
 	else
 		curr_state = next_state;
 		
 always @ *
 	case (curr_state)
-		IDEL: 
+		IDLE: 
 			if (start)
 				next_state = START;
 			else
-				next_state = IDEL;
+				next_state = IDLE;
 		START:
 			if (clk_sync && !dat_sync)
 				next_state = DATA;
 			else if (rx_timeout)
-				next_state = IDEL;
+				next_state = IDLE;
 			else
 				next_state = START;
 		DATA:
@@ -124,10 +125,10 @@ always @ *
 				next_state = STOP;
 		ACK:
 			if (bit_finish)
-				next_state = IDEL;
+				next_state = IDLE;
 			else
 				next_state = ACK;
-		default: next_state = IDEL;
+		default: next_state = IDLE;
 	endcase
 
 endmodule

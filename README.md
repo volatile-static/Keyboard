@@ -12,20 +12,24 @@
 
 # 104
   标准全键无冲 **PS/2 + USB** 双模键盘
-  > Cyclone IV E
-  ## 敬请期待！
-  
-# 17
+
+![104](104/preview.gif)
+
+> [wiki](https://gitee.com/const_volatile/programmable-keyboard/wikis)
+
+## 17
+
   17键炫彩蓝牙小键盘
 > 主控为nrf52810
 [源码](https://github.com/volatile-static/Keyboard/tree/master/17/v2/soft/code)
 
 
-![光效](https://github.com/volatile-static/Keyboard/blob/master/17/%E5%85%89%E6%95%88.gif)
+![光效](17/%E5%85%89%E6%95%88.gif)
 # 4
 **码农专属键盘，高效搬砖必备**
+
 > 由STM32F103的USB摇杆例程修改而来。
- ![效果图](https://github.com/volatile-static/Keyboard/blob/master/4/%E7%A0%81%E5%86%9C.gif)
+ ![效果图](4/%E7%A0%81%E5%86%9C.gif)
  # 82
   82键
     带USB集线器
@@ -34,9 +38,9 @@
  # 选型手册
 | 键数 | 主控 | 协议 | RGB | 扫描方式 | 其他 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 104 | EP4CE6E22 | USB + PS/2 | 一半 | 全键无冲 | 尚未完工 |
+| 104 | EP4CE6E22 | USB + PS/2 | 一半 | 全键无冲 | [购买](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=637588964083&ut_sk=1.X7R74tmmaOsDAD0RHKo4TqAp_21407387_1613018144287.Copy.detail.637588964083.2206517679956&forceFlush=1) |
 | 17 | nRF52810QC | BLE | 全 | TCA8418 | 18650供电 |
-| 4 | STM32F103C8 | USB | 无 | GPIO | |
+| 4 | STM32F103C8 | USB | 无 | GPIO | - |
 | 82 | STM32F103C8 | USB | 无 | AIP1638 | 带USB-hub |
 
 # 如何使用
@@ -44,14 +48,11 @@
 2. 焊上元件
 3. 烧录固件
 
-# 参考
-https://github.com/DengQilong/stm32-usb-game-controller
-
 # 重要的话说三遍
   - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
   - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
   - 本仓库仅存放代码，其他资料（电路板、文档、工具等）都在[百度云](https://pan.baidu.com/s/1vgmvWLqF3Rj9PztM5fmu6g)！提取码：6666
-  ![百度云](百度云.png)
+    ![百度云.png](https://i.loli.net/2021/02/11/K18CyYBzcbTi2It.jpg)
 > 资料中有数据手册、例程、HID键值、焊接测试代码、AD封装等
 
 # 联系方式

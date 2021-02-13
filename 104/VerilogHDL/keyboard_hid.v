@@ -19,7 +19,7 @@ reg[3:0] curr_state, next_state;
 reg[7:0] key_sync, hid_data;
 reg[31:0] delay;
 
-(* ram_init_file = "source/hid.mif" *)
+(* ram_init_file = "VerilogHDL/hid.mif" *)
 reg[7:0] hid_key_map[0 : 127];
 wire uart_en = curr_state != IDEL && curr_state != FINISH;
 
@@ -73,7 +73,7 @@ always @(posedge clock, posedge reset)
 		hid_data <= 0;
 	else case (curr_state)
 		IDEL: hid_data <= 0;
-		SPECIAL: hid_data <= 0;
+		SPECIAL: hid_data <= key_sync[7];// ? (key_sync[6:0] == 85 ? 2 : 0) | (key_sync[6:0] == 92 ? 1 : 0): 0;
 		RESERVED: hid_data <= 0;
 		KEY1: hid_data <= key_sync[7] ? hid_key_map[key_sync[6:0]] : 0;
 		KEY2: hid_data <= 0;

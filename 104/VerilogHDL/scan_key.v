@@ -7,11 +7,8 @@ module scan_key(
 
 reg[2:0] row_cnt;
 reg[20:0] col_sync;
-wire clk_scan;
 
-divider #(`SCAN_KEY_PERIOD) (clock, clk_scan);
-
-always @(posedge clk_scan, posedge reset)
+always @(posedge clock, posedge reset)
 	if (reset)
 		row_cnt <= 0;
 	else if (row_cnt >= 5)
@@ -21,10 +18,10 @@ always @(posedge clk_scan, posedge reset)
 
 assign ROW = enabled ? ~(6'h1 << row_cnt) : 6'b111111;
 
-always @(posedge clk_scan)
+always @(posedge clock)
 	col_sync <= COL;
 
-always @(posedge clk_scan, posedge reset)
+always @(posedge clock, posedge reset)
 	if (reset)
 		key_down = 0;
 	else begin: key_decode
@@ -42,7 +39,7 @@ always @(posedge clk_scan, posedge reset)
 			end
 			4: begin
 			  	key_down[70:59] = col_sync[11:0];
-				key_down[71] = col_sync[12];
+				key_down[71] = col_sync[13];
 				key_down[74:72] = col_sync[19:17];
 			end
 			5: begin
