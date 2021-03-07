@@ -1,14 +1,20 @@
 # True Programmable Keyboard
+<p align="center">
+    <a href='https://gitee.com/const_volatile/programmable-keyboard'><img src='https://gitee.com/const_volatile/programmable-keyboard/widgets/widget_6.svg' alt='Fork me on Gitee'></img></a>
+</p>
 
-[![Fork me on Gitee](https://gitee.com/const_volatile/programmable-keyboard/widgets/widget_6.svg)](https://gitee.com/const_volatile/programmable-keyboard)
-
-[中文](https://gitee.com/const_volatile/programmable-keyboard) | English
+<p align="center">
+    English | 
+    <a href="https://gitee.com/const_volatile/programmable-keyboard" target="_blank">中文</a>
+</p>
 
 ## Introduction
 
 This project aims to design a high-performance, cool-appearance, and completely customized keyboard, which is specially suitable for CS or EE enthusiasts' further development.
 
 ### Finished product
+
+Video avaliable [here](https://www.bilibili.com/video/BV1Yv411h7Sb/).
 
 ![counter](https://i.loli.net/2021/02/05/KOF3fBxvHteZkUj.gif)
 
@@ -18,7 +24,7 @@ This project aims to design a high-performance, cool-appearance, and completely 
 
 |  |  |
 | -------- | --------- |
-| total keys | 103+1     |
+| total keys | 103(matrix) + 1 <kbd>Fn</kbd> |
 | keyswitches | 3-pin MX |
 | anti-ghosting | full n-key rollover |
 | LEDs | 73 monochrome + 31 RGB + lock indicator |
@@ -28,32 +34,21 @@ This project aims to design a high-performance, cool-appearance, and completely 
 
 ### Features
 
-- fully programmable: 
-  Only use one`Cyclone IV E`family FPGA to control all the on board peripheral. Integrating the software programmability of soft processor with the hardware programmability of FPGA.
+- **fully** programmable:  Only use one`Cyclone IV E`family FPGA to control all the peripherals on board. Integrating the software programmability of soft processor with the hardware programmability of FPGA.
+  
+- **fully** open-source:  This repository stores the project for FPGA only. **PCB** and other resources are stored in Baidu Netdisk with different type of keyboard, see [home page](https://github.com/volatile-static/Keyboard) for details.
 
-- fully open-source: 
+- **full** n-key rollover:  Each switch in matrix connects to a Schottky diode in series, which will realize fundamental full n-key rollover taking advantage of PS/2 protocol.
 
-  This repository stores the project for FPGA only. **PCB** and other resources are stored in Baidu Netdisk with different type of keyboard, see [home page](https://github.com/volatile-static/Keyboard) for details.
+- **fully**-parallel LED driver:  **168** channels PWM count independently, connecting to Nios II soft core via Avalon-MM bus.
 
-- full n-key rollover: 
+- **fully**-parallel debouncing:  All of the debouncers work simultaneously. See also [Wiki](https://gitee.com/const_volatile/programmable-keyboard/wikis/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1?sort_id=3527145).
 
-  Each switch in matrix connects to a Schottky diode in series, which will realize fundamental full n-key rollover taking advantage of PS/2 protocol.
-
-- fully-parallel LED driver: 
-
-  **168** channels PWM count independently, connecting to Nios II soft core via Avalon-MM bus.
-
-- fully-parallel debouncing: 
-
-  All of the debouncers work simultaneously. See also [Wiki](https://gitee.com/const_volatile/programmable-keyboard/wikis/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1?sort_id=3527145).
-
-- fully-parallel interface: 
-
-  The USB and PS/2 interface can connect to different computer at the same time without any interference. Combining compatibility with performance.
+- **fully**-parallel interface:  The USB and PS/2 interface can connect to different computer at the same time without any interference. Combining compatibility with performance.
 
 ## Transparent blackbox
 
-Normally, the more encapsulation, the fewer details are visible.(like MATLAB) However, bing in charge of low-level details means less development speed.(like Assembly) This project try to work out a compromise that making application development as rapid as possible based on the most transparent.
+Normally, the more encapsulation, the fewer details are visible.(e.g. MATLAB) However, bing in charge of low-level details means less development speed.(e.g. Assembly) This project try to work out a compromise that making application development as rapid as possible based on the most transparent.
 
 ### Entirely in charge
 
@@ -71,7 +66,7 @@ Although cooperating with hardware and software, mastering every detail is not n
 - If you just want to practise soldering: Use PCB documents directly to order PCB prototype. Use BOM to order components. When you finish soldering, burn [firmware](https://gitee.com/const_volatile/programmable-keyboard/releases).
 - If you are skilled in mechanics: [Purchase an assembled pcba](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=637588964083&ut_sk=1.X7R74tmmaOsDAD0RHKo4TqAp_21407387_1613018144287.Copy.detail.637588964083.2206517679956&forceFlush=1), design your favourite keycap and shell based on existing plate file.
 - If you want to use the PS/2 protocol in your own project: Just use these [code](VerilogHDL/ps2_bus.v), [documents](https://blog.csdn.net/weixin_44560710/article/details/112798557) available as well.
-- If you are learning SpinalHDL: Just have a look at [code](SpinalHDL/src/main/scala/keyboard)~
+- If you are learning SpinalHDL: Just have a look at the [code](SpinalHDL/src/main/scala/keyboard)~
 
 
 ## Repository structure
@@ -97,4 +92,6 @@ Getting start from [wiki](https://gitee.com/const_volatile/programmable-keyboard
 6.  `make` embedded software project to get ELF.
 7.  Call Nios Shell，excute [command](Qsys/Software/kbd104/生成固件命令.TXT) in sequence then get HEX file.
 8.   Convert hex file to jic file and burn.
+
+Watch full [video](https://www.bilibili.com/video/BV1fh411D7SM/).
 

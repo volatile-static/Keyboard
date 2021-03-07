@@ -8,10 +8,10 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/volatile-static/Keyboard?color=lime)
 ![GitHub forks](https://img.shields.io/github/forks/volatile-static/Keyboard?color=red&style=social)
 
-客制化机械键盘——从0开始全套资料
+# 104 
+  <sub>Powered by [SpinalHDL](https://github.com/SpinalHDL)</sub>
 
-# 104
-  标准全键无冲 **PS/2 + USB** 双模键盘
+标准全键无冲 **PS/2 + USB** 双模键盘
 
 ![104](104/preview.gif)
 
@@ -55,5 +55,10 @@
     ![百度云.png](https://i.loli.net/2021/02/11/K18CyYBzcbTi2It.jpg)
 > 资料中有数据手册、例程、HID键值、焊接测试代码、AD封装等
 
+## Stargazers over time 
+
+[![Stargazers over time](https://starchart.cc/volatile-static/Keyboard.svg)](https://starchart.cc/volatile-static/Keyboard)    
+
 # 联系方式
+
   - [QQ](http://wpa.qq.com/msgrd?v=3&uin=1043064987&site=qq&menu=yes) ：1043064987

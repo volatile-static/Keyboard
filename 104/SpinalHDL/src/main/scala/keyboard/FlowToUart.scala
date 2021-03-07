@@ -12,7 +12,7 @@ object FlowToUart {
     uartCtrl.io.config.frame.parity := UartParityType.NONE
     uartCtrl.io.config.frame.stop := UartStopType.ONE
     uartCtrl.io.writeBreak := False
-    uartCtrl.io.write.payload := RegNextWhen(scanIdx.payload, scanIdx.valid)
+    uartCtrl.io.write.payload := scanIdx.toReg
     val valid = RegInit(False)
     uartCtrl.io.write.valid := valid
       when(scanIdx.valid) {

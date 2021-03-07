@@ -1,7 +1,7 @@
 package keyboard
 
 import spinal.core._
-import spinal.lib.eda.altera._
+import spinal.lib.ResetCtrl
 
 class TopLevel() extends Component {
   val io = new Bundle() {
@@ -18,29 +18,40 @@ class TopLevel() extends Component {
     }
   }
 
-  val rstSrc: reset_controller = reset_controller()
-  rstSrc.clock := io.CLK_50
-  rstSrc.KEY_Fn := io.KEY_Fn
-  val reset: Bool = Bool
-  reset := rstSrc.reset
+  val pll100: pll = pll()
+  pll100.inclk0 <> io.CLK_50
 
-  io.LED_R6 := False
+  val rstCtrl: ResetController = ResetController()
+  rstCtrl.io.clock <> io.CLK_50
+  rstCtrl.io.externalReset <> !io.KEY_Fn
 
-  val clk50Area: ClockingArea = new ClockingArea(ClockDomain(
+  val globalClockDomain = new ClockDomain(
     clock = io.CLK_50,
-    reset = reset,
+    reset = False.allowOverride,
     frequency = FixedFrequency(50 MHz)
-  )) {
-    val keyMatrix: KeyMatrix = KeyMatrix(200 us, 500 us)
+  )
+  ResetCtrl.asyncAssertSyncDeassertDrive(
+    input = rstCtrl.io.globalReset || !pll100.locked,
+    clockDomain = globalClockDomain,
+    outputPolarity = HIGH
+  )
+
+  val core: kbd104 = kbd104()
+  core.clk_clk <> pll100.c0
+  core.reset_reset_n <> ~globalClockDomain.reset
+  core.io_row <> io.LED_A
+  core.io_col <> io.LED_K
+  core.flash <> io.flash
+
+  io.LED_R6 <> globalClockDomain.reset
+
+  val clk50Area: ClockingArea = new ClockingArea(globalClockDomain) {
+    val keyMatrix: KeyMatrix = KeyMatrix(500 us, 1 ms)
     io.ROW <> keyMatrix.ROW
     io.COL <> keyMatrix.COL
     keyMatrix.enabled := True
-
-    val core: kbd104 = kbd104()
     core.uart.rxd := FlowToUart(keyMatrix.scanIdx)
-    core.io_row <> io.LED_A
-    core.io_col <> io.LED_K
-    core.flash <> io.flash
+
 //    val ps2: PS2 = PS2()
 //    ps2.PS2_CLK <> io.PS2_CLK
 //    ps2.PS2_DAT <> io.PS2_DAT
@@ -53,31 +64,4 @@ class TopLevel() extends Component {
       .foreach(i => hid.keyStatus(i) <> keyMatrix.keyStatus(i))
   }
   //    println(s"latency ${LatencyAnalysis(a,c)}")
-}
-
-
-object GenerateTop {
-  def main(args: Array[String]) {
-    new SpinalConfig(
-      defaultClockDomainFrequency = FixedFrequency(50 MHz)
-    ).generateSystemVerilog(new TopLevel)
-//    spinal.lib.eda.altera
-//    val prj = new QuartusProject(
-//      "F:/intelFPGA_lite/20.1/quartus/bin64/",
-//      "../")
-//    prj.compile()
-//    prj.program()
-  }
-}
-
-object GenerateIP {
-  def main(args: Array[String]): Unit = {
-    new SpinalConfig(
-      defaultClockDomainFrequency = FixedFrequency(80 MHz)
-    ).generateSystemVerilog(new LedMatrix)
-
-//    val ip = SpinalVerilog(LedPlayground()).toplevel
-//    ip.bus.addTag(ClockDomainTag(ip.clockDomain))
-//    QSysify(ip)
-  }
 }
