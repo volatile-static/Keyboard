@@ -56,7 +56,7 @@ This is what is called "hardware/software co-design" in a broad sense. The full 
 
 For example, the LED driver solution.  First of all, you should design the scanning mode and select appropriate transistor. Secondly, write  RTL code of matrix scanning according to your schematic. And then realize the digital logic of brightness adjuestment and memory map to soft core. Finally, it's embedded software about RGB color transformation algorithms, etc.
 
-As long as you wish, everything is transparent -- straightaway from a C function to the current in transistors.
+As long as you wish, everything is transparent from top to bottom -- straightaway from a C function to the current in transistors.
 
 ### Pretty encapsulation
 
@@ -76,7 +76,7 @@ This repo includes four sub-project as below.
 | Project                                        | Introduction                                                 |
 | ---------------------------------------------- | ------------------------------------------------------------ |
 | Quartus                                        | Starting point and destination of the whole project. [Low level code](VerilogHDL/) written in VerilogHDL. |
-| [SpinalHDL](SpinalHDL/src/main/scala/keyboard) | Use [open source](https://github.com/SpinalHDL) high level hardware description language to program toplevel logic. |
+| SpinalHDL                                      | Use [open source](https://github.com/SpinalHDL) high level hardware description language to program toplevel logic. |
 | Qsys hardware                                  | SOPC designed by Platform Designer.                          |
 | [Nios software](Qsys/Software/kbd104)          | Applications written in C language, running in Qsys hardware. |
 
@@ -91,7 +91,6 @@ Getting start from [wiki](https://gitee.com/const_volatile/programmable-keyboard
 5.  Start compilation and download sof.
 6.  `make` embedded software project to get ELF.
 7.  Call Nios Shell，excute [command](Qsys/Software/kbd104/生成固件命令.TXT) in sequence then get HEX file.
-8.   Convert hex file to jic file and burn.
+8.  Convert hex file to `jic` file and burn it.
 
-Watch full [video](https://www.bilibili.com/video/BV1fh411D7SM/).
-
+> Watch full [video](https://www.bilibili.com/video/BV1fh411D7SM/).
