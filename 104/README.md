@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This project aims to design a high-performance, cool-appearance, and completely customized keyboard, which is specially suitable for CS or EE enthusiasts' further development.
+This project aims to design a high-performance, cool-appearance, and well customized keyboard, which is specially suitable for CS or EE enthusiasts' further development.
 
 ### Finished product
 
