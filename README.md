@@ -1,4 +1,5 @@
 # Keyboard
+![visitors](https://jwenjian-visitor-badge-5.glitch.me/badge?page_id=volatile-static.Keyboard)
 ![stars](https://img.shields.io/github/stars/volatile-static/Keyboard)
 ![GitHub language count](https://img.shields.io/github/languages/count/volatile-static/Keyboard)
 ![GitHub repo size](https://img.shields.io/github/repo-size/volatile-static/Keyboard?style=plastic)
