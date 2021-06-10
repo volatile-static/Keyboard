@@ -1,3 +1,0 @@
-/mnt/f/intelFPGA_lite/20.1/nios2eds/bin/sof2flash.exe --input=../../../output_files/kbd104.sof --output=hw.flash --epcs --verbose
-/mnt/f/intelFPGA_lite/20.1/nios2eds/bin/elf2flash.exe --input=kbd104.elf --output=sw.flash --epcs --after=hw.flash --verbose
-/mnt/f/intelFPGA_lite/20.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/nios2-elf-objcopy.exe --input-target srec --output-target ihex sw.flash img.hex

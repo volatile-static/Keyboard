@@ -8,7 +8,8 @@ case class KeyMatrix(scanPeriod: TimeNumber, bounceTime: TimeNumber) extends Com
   val COL: Bits = in Bits(21 bits)
   val ROW: Bits = out Bits(6 bits)
   val scanIdx: Flow[Bits] = master Flow Bits(8 bits)
-  val keyStatus: Vec[Flow[Bool]] = Vec(master(Flow(Bool)), 103)
+  val keyStatus: Vec[Flow[Bool]] = Vec(Flow(Bool), 103)
+  val keyBits: Bits = out(keyStatus.asBits)
 
   val clkScan: Timeout = Timeout(scanPeriod.toHertz * 6)
   when(clkScan) (clkScan.clear)

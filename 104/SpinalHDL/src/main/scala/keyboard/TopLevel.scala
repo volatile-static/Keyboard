@@ -1,7 +1,7 @@
 package keyboard
 
 import spinal.core._
-import spinal.lib.ResetCtrl
+import spinal.lib._
 
 class TopLevel() extends Component {
   val io = new Bundle() {
@@ -11,17 +11,9 @@ class TopLevel() extends Component {
     val LED_A, ROW = out Bits(6 bits)
     val LED_K: Bits = out Bits(35 bits)
     val TXD, LED_R6 = out Bool
-    val PS2_CLK, PS2_DAT = inout(Analog(Bool))  // tri
-    val flash: Bundle = new Bundle {
-      val dclk, sce, sdo = out Bool
-      val data0: Bool = in Bool
-    }
+    val PS2 = new ps2_bundle
   }
-
-  val pll100: pll = pll()
-  pll100.inclk0 <> io.CLK_50
-
-  val rstCtrl: ResetController = ResetController()
+  val rstCtrl: ResetController = new ResetController
   rstCtrl.io.clock <> io.CLK_50
   rstCtrl.io.externalReset <> !io.KEY_Fn
 
@@ -30,38 +22,32 @@ class TopLevel() extends Component {
     reset = False.allowOverride,
     frequency = FixedFrequency(50 MHz)
   )
+  val core: TPK = TPK(globalClockDomain)
   ResetCtrl.asyncAssertSyncDeassertDrive(
-    input = rstCtrl.io.globalReset || !pll100.locked,
+    input = rstCtrl.io.globalReset || !core.locked_export,
     clockDomain = globalClockDomain,
     outputPolarity = HIGH
   )
-
-  val core: kbd104 = kbd104()
-  core.clk_clk <> pll100.c0
-  core.reset_reset_n <> ~globalClockDomain.reset
-  core.io_row <> io.LED_A
-  core.io_col <> io.LED_K
-  core.flash <> io.flash
-
-  io.LED_R6 <> globalClockDomain.reset
+  core.led_row_export <> io.LED_A
+  core.led_col_export <> io.LED_K
+  io.LED_R6 := True
 
   val clk50Area: ClockingArea = new ClockingArea(globalClockDomain) {
-    val keyMatrix: KeyMatrix = KeyMatrix(500 us, 1 ms)
+    val keyMatrix: KeyMatrix = KeyMatrix(200 us, 5 ms)
     io.ROW <> keyMatrix.ROW
     io.COL <> keyMatrix.COL
     keyMatrix.enabled := True
-    core.uart.rxd := FlowToUart(keyMatrix.scanIdx)
+    core.scan_idx <> keyMatrix.scanIdx
 
-//    val ps2: PS2 = PS2()
-//    ps2.PS2_CLK <> io.PS2_CLK
-//    ps2.PS2_DAT <> io.PS2_DAT
-//    ps2.scanIdx <> keyMatrix.scanIdx
+    val ps2: PS2Device = PS2Device()
+    ps2.PS2 <> io.PS2
+    ps2.sendToHost << core.send_to_host
+    ps2.receiveFromHost.toStream >> core.receive_from_host
 
     val hid: HID = HID()
     hid.TXD <> io.TXD
     hid.scanIdx <> keyMatrix.scanIdx
-    List(74, 85, 90, 91, 92, 94, 96)
-      .foreach(i => hid.keyStatus(i) <> keyMatrix.keyStatus(i))
+    hid.keyBits <> keyMatrix.keyBits
   }
   //    println(s"latency ${LatencyAnalysis(a,c)}")
 }

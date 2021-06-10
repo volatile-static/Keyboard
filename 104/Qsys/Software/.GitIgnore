@@ -1,0 +1,25 @@
+# Eclipse
+bin/
+.classpath
+.project
+.cproject
+*.cproject
+.settings
+.cache-main
+.metadata
+.force_relink
+obj
+*.objdump
+RemoteSystemsTempFiles
+*.map
+*.elf
+*.a
+*.html
+*.x
+*.qip
+/tpk_key/mem_init/
+/tpk_led/mem_init/
+/tpk_led_bsp/HAL/
+/tpk_led_bsp/drivers/
+/tpk_key_bsp/HAL/
+/tpk_key_bsp/drivers/

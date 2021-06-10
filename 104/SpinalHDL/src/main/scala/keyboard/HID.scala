@@ -8,7 +8,9 @@ import spinal.lib._
 case class HID() extends Component {
   val TXD: Bool = out Bool()
   val scanIdx: Flow[Bits] = slave Flow Bits(8 bits)
-  val keyStatus: Vec[Flow[Bool]] = Vec(slave(Flow(Bool)), 103)
+  val keyStatus: Vec[Flow[Bool]] = Vec(Flow(Bool), 103)
+  val keyBits: Bits = in(Bits(keyStatus.asBits.getBitsWidth bits))
+  keyStatus.assignFromBits(keyBits)
 
   val uartCtrl = new UartCtrl
   val uartConf: Area = new Area {
@@ -22,7 +24,7 @@ case class HID() extends Component {
     TXD := uartCtrl.io.uart.txd
   }
   val hidKeyTable = new Mem(Bits(8 bits), 128)
-  hidKeyTable.addAttribute("ram_init_file", "VerilogHDL/hid.mif")
+  hidKeyTable.addAttribute("ram_init_file", "../VerilogHDL/hid.mif")
 
   val idxLatch: UInt = RegNextWhen(U(scanIdx.payload(0, 7 bits)), scanIdx.valid, 0)
   val staLatch: Bool = RegNextWhen(scanIdx.payload(7), scanIdx.valid, False)

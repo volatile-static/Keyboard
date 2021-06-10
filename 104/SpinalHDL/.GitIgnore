@@ -1,0 +1,9 @@
+.idea
+target
+project/boot/
+project/plugins/project/
+null
+*.sv
+*.v
+*.log
+*.tcl

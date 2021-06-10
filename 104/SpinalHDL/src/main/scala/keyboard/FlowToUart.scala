@@ -15,13 +15,12 @@ object FlowToUart {
     uartCtrl.io.write.payload := scanIdx.toReg
     val valid = RegInit(False)
     uartCtrl.io.write.valid := valid
-      when(scanIdx.valid) {
+    when(scanIdx.valid) {
       valid := True
-    } otherwise {
-      when(uartCtrl.io.write.ready) {
-        valid := False
-      }
+    } elsewhen uartCtrl.io.write.ready {
+      valid := False
     }
+
     uartCtrl.io.uart.rxd := True
     uartCtrl.io.uart.txd
   }

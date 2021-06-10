@@ -16,6 +16,7 @@ case class LedMatrix(scanPeriod: TimeNumber = 50 us) extends Component {
       readLatency = 0
     ).copy(useWaitRequestn = false).getWriteOnlyConfig
   ))
+  bus addTag ClockDomainTag(ClockDomain.current)
 
   def busReg(address: Int): UInt =
     RegNextWhen(bus.writeData.asUInt, bus.write && bus.address === address, U(0))
@@ -24,7 +25,7 @@ case class LedMatrix(scanPeriod: TimeNumber = 50 us) extends Component {
     val fn: UInt = UInt(16 bits)
     val locks: Vec[UInt] = Vec(UInt(8 bits), 3)
     val rgb: Vec[UInt] = Vec(UInt(24 bits), 30)
-
+// TODO: 4*
     (0 until 73).foreach(i => ice(i) := busReg(i).resized)
     fn := busReg(73).resized
     (0 until 30).foreach(i => rgb(i) := busReg(74 + i).resized)
