@@ -8,15 +8,16 @@ case class Debounce(scanPeriod: TimeNumber, bounceTime: TimeNumber) extends Comp
   val keyStatus: Vec[Flow[Bool]] = Vec(master(Flow(Bool)), 103)
 
   case class SingleKey(cntInit: BigInt) extends Component {
-    val raw: Bool = in Bool
+    val raw: Bool = in Bool()
     val filtered: Flow[Bool] = master Flow Bool
 
+    val lat: Bool = Delay(!raw, 2)
     val cnt: UInt = RegInit(cntInit)
-    when(raw.edge) { cnt := U(cntInit) }
     when(cnt =/= 0) (cnt := cnt - 1)
+    when(raw.edge) { cnt := U(cntInit) }
     filtered.valid := RegNext(cnt === 1)
-    filtered.payload := RegNextWhen(!raw, cnt === 1)
-//    println(s"latency ${LatencyAnalysis(filtered.valid, filtered.payload)}\n")
+    filtered.payload := RegNextWhen(lat, cnt === 1)
+//    println(s"latency ${LatencyAnalysis(raw, filtered.payload)}\n")
   }
   new SlowArea(scanPeriod.toHertz, true) {
     for (idx <- 0 until 103) {
