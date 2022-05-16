@@ -17,32 +17,35 @@
 #include <io.h>
 #include <stdio.h>
 #include <system.h>
-//#include <unistd.h>
+#include <unistd.h>
+#include <altera_avalon_uart_regs.h>
 #include "key.h"
 #include "ps2_tx.h"
-#include <altera_avalon_uart_regs.h>
 
 int main() {
-	key_init();
 	unsigned cpuid = __builtin_rdctl(5);
 	printf("Hello from Nios II%d(Key)!\n", cpuid);
+//	key_init();
 
-	while (1) {
-		if (key_flow.valid) {
-			printf("%d\n", key_flow.down);
-			key_flow.valid = false;
-			if (key_flow.down)
-				ps2_make(key_flow.code);
-			else
-				ps2_break(key_flow.code);
+	for (unsigned tim = _alt_nticks; ;) {
+		for (char i = 1; i < 103; ++i) {
+			unsigned sta = IORD(KEY_STREAM_BASE, i);
+			if (sta & 1) {
+				if (sta & 2)
+					ps2_push(i - 1);
+				else
+					ps2_release(i - 1);
+			}
 		}
 
-		IORD(KEY_STREAM_BASE, 0);
-
-//		unsigned tmp;
-//		tmp = IORD(PS2_BASE, PS2_RX_OFST);
-//		if (tmp & PS2_RX_VALID_MSK)
-//			printf("%x\n", tmp & PS2_RX_PAYLOAD_MSK);
+//		key_flow_t k = key_get();
+//		if (k.valid) {
+//			key_set();
+//			if (k.down)
+//				ps2_make(k.code);
+//			else
+//				ps2_break(k.code);
+//		}
 	}
 	return 0;
 }

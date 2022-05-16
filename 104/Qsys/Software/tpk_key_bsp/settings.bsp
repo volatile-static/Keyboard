@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2021-6-8 18:12:56</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1623147176311</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>E:\DEVELOPMENT\PROJECTS\KBD\Qsys\Software\tpk_key_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2022-5-16 12:51:03</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1652676663234</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>E:\DEVELOPMENT\PROJECTS\TPK\Qsys\Software\tpk_key_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>E:\DEVELOPMENT\PROJECTS\KBD\Qsys\Hardware\TPK.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\Hardware\TPK.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>key_core</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -905,32 +905,32 @@
                 <attributes>memory</attributes>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>key_stream</slaveDescriptor>
+                <addressRange>0x00011000 - 0x000111FF</addressRange>
+                <addressSpan>512</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>timer_1</slaveDescriptor>
-                <addressRange>0x00011000 - 0x0001101F</addressRange>
+                <addressRange>0x00011200 - 0x0001121F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>key_stream</slaveDescriptor>
-                <addressRange>0x00011020 - 0x00011027</addressRange>
-                <addressSpan>8</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
                 <slaveDescriptor>sysid0</slaveDescriptor>
-                <addressRange>0x00011028 - 0x0001102F</addressRange>
+                <addressRange>0x00011220 - 0x00011227</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>key_con</slaveDescriptor>
-                <addressRange>0x00011030 - 0x00011037</addressRange>
+                <addressRange>0x00011228 - 0x0001122F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>PS2Tx</slaveDescriptor>
-                <addressRange>0x00011038 - 0x0001103B</addressRange>
+                <slaveDescriptor>PS2_PS2Tx</slaveDescriptor>
+                <addressRange>0x00011230 - 0x00011233</addressRange>
                 <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>

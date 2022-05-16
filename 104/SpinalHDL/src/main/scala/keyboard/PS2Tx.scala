@@ -4,7 +4,7 @@ import spinal.core._
 import spinal.lib._
 import spinal.lib.bus.avalon._
 
-case class PS2Tx(fifoDepth : Int = 8) extends Component {
+case class PS2Tx(fifoDepth : Int = 16) extends Component {
   val sendToHost: Stream[Bits] = master Stream Bits(8 bits)
   val mm: AvalonMM = slave(AvalonMM(
     AvalonMMSlaveFactory.getAvalonConfig(2, 32)))

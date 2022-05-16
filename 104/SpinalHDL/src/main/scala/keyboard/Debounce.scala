@@ -17,7 +17,7 @@ case class Debounce(scanPeriod: TimeNumber, bounceTime: TimeNumber) extends Comp
     when(raw.edge) { cnt := U(cntInit) }
     filtered.valid := RegNext(cnt === 1)
     filtered.payload := RegNextWhen(lat, cnt === 1)
-//    println(s"latency ${LatencyAnalysis(raw, filtered.payload)}\n")
+//  println(s"latency ${LatencyAnalysis(raw, filtered.payload)}\n")
   }
   new SlowArea(scanPeriod.toHertz, true) {
     for (idx <- 0 until 103) {

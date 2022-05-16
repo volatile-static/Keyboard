@@ -12,9 +12,9 @@
 #include <system.h>
 
 #define PERIOD_ICE (100)
-#define PERIOD_RGB (6)
+#define PERIOD_RGB (2)
 
-#define SET_LED(id, val) IOWR(LEDMATRIX_BASE, id, val)
+#define SET_LED(id, val) IOWR(LEDMATRIX_BASE, (id), (val))
 
 #define ICE_BEGIN 0
 #define ICE_END 72

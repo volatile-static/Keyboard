@@ -8,6 +8,7 @@
 #include "key.h"
 #include <stdint.h>
 #include <system.h>
+#include <io.h>
 #include <altera_avalon_uart_regs.h>
 #include <priv/alt_legacy_irq.h>
 
@@ -25,3 +26,12 @@ void key_init(void) {
 	int err = alt_irq_register(KEY_STREAM_IRQ, NULL, key_isr);  //×¢²áÖÐ¶Ï
 	printf("kirq:%d\n", err);
 }
+
+key_flow_t key_get(void) {
+	return key_flow;
+}
+
+void key_set(void) {
+	key_flow.valid = false;
+}
+

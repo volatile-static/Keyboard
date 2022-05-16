@@ -19,8 +19,6 @@ typedef struct {
 	uint8_t code;
 } key_flow_t;
 
-extern key_flow_t key_flow;
-
 static const unsigned char KEY2LED[103] = {
     0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 74, 75, 76,  // row0
     13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 77, 78, 79, 80, 81, 82, 83,  // row1
@@ -31,5 +29,8 @@ static const unsigned char KEY2LED[103] = {
 };
 
 void key_init(void);
+key_flow_t key_get(void);
+void key_set(void);
+
 
 #endif /* KEY_H_ */

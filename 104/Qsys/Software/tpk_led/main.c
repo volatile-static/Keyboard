@@ -22,30 +22,28 @@
 int main() {
 	unsigned cpuid = __builtin_rdctl(5);
 	printf("Hello from Nios II %x£¨LED£©!\n", cpuid);
-//	led_init();
-//	key_init();
+	led_init();
+	key_init();
 
-	SET_LED(CAPS_LOCK, 22);
-	SET_LED(NUM_LOCK, 233);
-	SET_LED(SCR_LOCK, 0);
-	for (char i = 0; i < 107; ++i)
-		SET_LED(i, 0xffffffffu);
-
-	for (char flag = 0; ;) {
-		IORD(KEY_STREAM_BASE, 0);
-//		led_sched();
-//		unsigned tmp;
-//		tmp = IORD(PS2RX_BASE, PS2_RX_OFST);
-//		if (tmp & PS2_RX_VALID_MSK) {
-//			printf("%x\n", tmp);
-//			if (flag) {
-//				flag = 0;
-//				SET_LED(SCR_LOCK, tmp & PS2_SCRLK_MSK ? 255 : 0);
-//				SET_LED(CAPS_LOCK, tmp & PS2_CAPLK_MSK ? 255 : 0);
-//				SET_LED(NUM_LOCK, tmp & PS2_NUMLK_MSK ? 255 : 0);
-//			} else if ((tmp & PS2_RX_PAYLOAD_MSK) == 0xed)
-//				flag = 1;
+	for (char flag = 0; ; ) {
+//		key_flow_t k = key_get();
+//		if (k.valid) {
+//			key_set();
+////			if (k.down)printf("keyd: 0x%x\n", k.code);
+//			SET_LED(KEY2LED[k.code], k.down ? 0xffffff : 0);
 //		}
+		led_sched();
+		unsigned tmp = IORD(PS2_PS2RX_BASE, PS2_RX_OFST);
+		if (tmp & PS2_RX_VALID_MSK) {
+			if ((tmp & PS2_RX_PAYLOAD_MSK) == 0xed)
+				++flag;
+			else if (flag) {
+				--flag;
+				SET_LED(SCR_LOCK, tmp & PS2_SCRLK_MSK ? 255 : 0);
+				SET_LED(CAPS_LOCK, tmp & PS2_CAPLK_MSK ? 255 : 0);
+				SET_LED(NUM_LOCK, tmp & PS2_NUMLK_MSK ? 255 : 0);
+			}
+		}
 	}
 	return 0;
 }

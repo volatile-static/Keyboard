@@ -2,11 +2,11 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>2021-6-8 18:13:34</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1623147214523</BspGeneratedUnixTimeStamp>
-        <BspGeneratedLocation>E:\DEVELOPMENT\PROJECTS\KBD\Qsys\Software\tpk_led_bsp</BspGeneratedLocation>
+        <BspGeneratedTimeStamp>2022-5-14 20:18:32</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1652530712476</BspGeneratedUnixTimeStamp>
+        <BspGeneratedLocation>E:\DEVELOPMENT\PROJECTS\TPK\Qsys\Software\tpk_led_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
-        <SopcDesignFile>E:\DEVELOPMENT\PROJECTS\KBD\Qsys\Hardware\TPK.sopcinfo</SopcDesignFile>
+        <SopcDesignFile>..\..\Hardware\TPK.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>led_core</Cpu>
         <SchemaVersion>1.9</SchemaVersion>
@@ -900,37 +900,43 @@
         </Setting>
         <MemoryMap>
                 <slaveDescriptor>LedMatrix</slaveDescriptor>
-                <addressRange>0x00001000 - 0x0000107F</addressRange>
-                <addressSpan>128</addressSpan>
+                <addressRange>0x00001000 - 0x000013FF</addressRange>
+                <addressSpan>1024</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>key_stream</slaveDescriptor>
+                <addressRange>0x00001400 - 0x000015FF</addressRange>
+                <addressSpan>512</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>timer_0</slaveDescriptor>
-                <addressRange>0x00001080 - 0x0000109F</addressRange>
+                <addressRange>0x00001600 - 0x0000161F</addressRange>
                 <addressSpan>32</addressSpan>
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>key_stream</slaveDescriptor>
-                <addressRange>0x000010A0 - 0x000010A7</addressRange>
-                <addressSpan>8</addressSpan>
+                <slaveDescriptor>altpll_0</slaveDescriptor>
+                <addressRange>0x00001620 - 0x0000162F</addressRange>
+                <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x000010A8 - 0x000010AF</addressRange>
+                <addressRange>0x00001630 - 0x00001637</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>led_con</slaveDescriptor>
-                <addressRange>0x000010B0 - 0x000010B7</addressRange>
+                <addressRange>0x00001638 - 0x0000163F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>PS2Rx</slaveDescriptor>
-                <addressRange>0x000010B8 - 0x000010BB</addressRange>
+                <slaveDescriptor>PS2_PS2Rx</slaveDescriptor>
+                <addressRange>0x00001640 - 0x00001643</addressRange>
                 <addressSpan>4</addressSpan>
                 <attributes/>
         </MemoryMap>

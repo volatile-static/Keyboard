@@ -11,7 +11,7 @@ case class LedMatrix(scanPeriod: TimeNumber = 50 us) extends Component {
   }
   val bus: AvalonMM = slave(AvalonMM(
     AvalonMMConfig.fixed(
-      addressWidth = 7,
+      addressWidth = 10,
       dataWidth = 32,
       readLatency = 0
     ).copy(useWaitRequestn = false).getWriteOnlyConfig
@@ -25,14 +25,14 @@ case class LedMatrix(scanPeriod: TimeNumber = 50 us) extends Component {
     val fn: UInt = UInt(16 bits)
     val locks: Vec[UInt] = Vec(UInt(8 bits), 3)
     val rgb: Vec[UInt] = Vec(UInt(24 bits), 30)
-// TODO: 4*
-    (0 until 73).foreach(i => ice(i) := busReg(i).resized)
-    fn := busReg(73).resized
-    (0 until 30).foreach(i => rgb(i) := busReg(74 + i).resized)
+
+    (0 until 73).foreach(i => ice(i) := busReg(i*4).resized)
+    fn := busReg(292).resized
+    (0 until 30).foreach(i => rgb(i) := busReg(296 + i*4).resized)
     locks := Vec(
-      busReg(104).resized,
-      busReg(105).resized,
-      busReg(106).resized
+      busReg(416).resized,
+      busReg(420).resized,
+      busReg(424).resized
     )
   }
   val ledSta: Bits = Bits(168 bits)

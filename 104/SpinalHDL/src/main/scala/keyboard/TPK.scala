@@ -10,8 +10,9 @@ case class TPK(clk: ClockDomain) extends BlackBox {
   val led_col_export: Bits = out Bits(35 bits)
   val scan_idx: Flow[Bits] = slave Flow Bits(8 bits)
   val send_to_host: Stream[Bits] = master Stream Bits(8 bits)
-  val receive_from_host: Stream[Bits] = slave Stream Bits(8 bits)
+  val receive_from_host: Flow[Bits] = slave Flow Bits(8 bits)
   val locked_export: Bool = out Bool()
+  val key_bits_export: Bits = in Bits(206 bits)
   mapClockDomain(
     clockDomain = clk,
     clock = clk_clk,

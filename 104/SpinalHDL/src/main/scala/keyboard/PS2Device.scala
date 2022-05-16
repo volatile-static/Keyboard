@@ -15,8 +15,9 @@ case class PS2Device() extends Component{
   }
   val bus = new ps2_bus(
     ClockDomain.current.copy(ps2ClkArea.clockQuarter),
-    80
+    160
   )
+
   bus.PS2 <> PS2
   bus.tx.valid := False
   bus.tx.payload := B(0)

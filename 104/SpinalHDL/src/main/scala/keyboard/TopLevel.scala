@@ -6,12 +6,16 @@ import spinal.lib._
 class TopLevel() extends Component {
   val io = new Bundle() {
     noIoPrefix()
-    val KEY_Fn, CLK_50 = in Bool
+    val KEY_Fn, CLK_50 = in Bool()
     val COL: Bits = in Bits(21 bits)
     val LED_A, ROW = out Bits(6 bits)
     val LED_K: Bits = out Bits(35 bits)
-    val TXD, LED_R6 = out Bool
+    val TXD, LED_R6 = out Bool()
     val PS2 = new ps2_bundle
+//    val flash: Bundle = new Bundle {
+//      val dclk, sce, sdo = out Bool false
+//      val data0: Bool = in Bool()
+//    }
   }
   val rstCtrl: ResetController = new ResetController
   rstCtrl.io.clock <> io.CLK_50
@@ -38,11 +42,12 @@ class TopLevel() extends Component {
     io.COL <> keyMatrix.COL
     keyMatrix.enabled := True
     core.scan_idx <> keyMatrix.scanIdx
+    core.key_bits_export <> keyMatrix.keyBits
 
     val ps2: PS2Device = PS2Device()
     ps2.PS2 <> io.PS2
     ps2.sendToHost << core.send_to_host
-    ps2.receiveFromHost.toStream >> core.receive_from_host
+    ps2.receiveFromHost >> core.receive_from_host
 
     val hid: HID = HID()
     hid.TXD <> io.TXD

@@ -6,10 +6,10 @@ import spinal.lib._
 case class ResetController(powerOnTime: TimeNumber = 1 ms,
                            externalTime: TimeNumber = 3 sec
                           ) extends Component {
-  val io = new Bundle{
-    val clock: Bool = in Bool
-    val externalReset: Bool = in Bool
-    val globalReset: Bool = out Bool
+  val io = new Bundle {
+    val clock: Bool = in Bool()
+    val externalReset: Bool = in Bool()
+    val globalReset: Bool = out Bool()
   }
   val freq: HertzNumber = ClockDomain.current.frequency.getValue
 

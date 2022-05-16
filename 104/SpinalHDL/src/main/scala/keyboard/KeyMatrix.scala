@@ -4,14 +4,14 @@ import spinal.core._
 import spinal.lib._
 
 case class KeyMatrix(scanPeriod: TimeNumber, bounceTime: TimeNumber) extends Component {
-  val enabled: Bool = in Bool
+  val enabled: Bool = in Bool()  // enable the line scan signal
   val COL: Bits = in Bits(21 bits)
   val ROW: Bits = out Bits(6 bits)
-  val scanIdx: Flow[Bits] = master Flow Bits(8 bits)
-  val keyStatus: Vec[Flow[Bool]] = Vec(Flow(Bool), 103)
+  val scanIdx: Flow[Bits] = master Flow Bits(8 bits)  // output key event
+  val keyStatus: Vec[Flow[Bool]] = Vec(Flow(Bool), 103)  // push or release for each key
   val keyBits: Bits = out(keyStatus.asBits)
 
-  val clkScan: Timeout = Timeout(scanPeriod.toHertz * 6)
+  val clkScan: Timeout = Timeout(scanPeriod.toHertz * 6)  // sync the 6 lines
   when(clkScan) (clkScan.clear)
 
   val scanK: scan_key = scan_key(
