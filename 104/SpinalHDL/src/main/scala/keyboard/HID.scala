@@ -3,31 +3,38 @@ package keyboard
 import spinal.core._
 import spinal.lib.com.uart._
 import spinal.lib.fsm._
-import spinal.lib._
 
 case class HID() extends Component {
   val TXD: Bool = out Bool()
   val scanIdx: Flow[Bits] = slave Flow Bits(8 bits)
   val keyStatus: Vec[Flow[Bool]] = Vec(Flow(Bool), 103)
   val keyBits: Bits = in(Bits(keyStatus.asBits.getBitsWidth bits))
-  keyStatus.assignFromBits(keyBits)
+  keyStatus.assignFromBits(keyBits)  // bootcamp
 
-  val uartCtrl = new UartCtrl
-  val uartConf: Area = new Area {
-    uartCtrl.io.config.setClockDivider(9600 Hz)
-    uartCtrl.io.config.frame.dataLength := 7  //8 bits
-    uartCtrl.io.config.frame.parity := UartParityType.NONE
-    uartCtrl.io.config.frame.stop := UartStopType.ONE
-    uartCtrl.io.uart.rxd := True
-    uartCtrl.io.writeBreak := False
-    uartCtrl.io.write.payload := B(0)
-    TXD := uartCtrl.io.uart.txd
-  }
+  val uartCtrl: UartCtrl = UartCtrl(
+    config = UartCtrlInitConfig(
+      baudrate = 9600,
+      dataLength = 7,  // 8 bits
+      parity = UartParityType.NONE,
+      stop = UartStopType.ONE
+    )
+  )
+  uartCtrl.io.uart.rxd := True  // High is the idle state for UART
+  TXD := uartCtrl.io.uart.txd
+  uartCtrl.io.write.payload := B(0)
+
   val hidKeyTable = new Mem(Bits(8 bits), 128)
   hidKeyTable.addAttribute("ram_init_file", "../VerilogHDL/hid.mif")
 
-  val idxLatch: UInt = RegNextWhen(U(scanIdx.payload(0, 7 bits)), scanIdx.valid, 0)
-  val staLatch: Bool = RegNextWhen(scanIdx.payload(7), scanIdx.valid, False)
+  val scanFifo: Stream[Bits] = scanIdx.toStream(
+    overflow = False,
+    fifoSize = 6,
+    overflowOccupancyAt = 6
+  )
+
+  def getIdx(payload: Bits): UInt = U(payload(0, 7 bits))
+  val getCond: Bool = scanFifo.payload(7) //&& RegNext(scanFifo.valid)
+  val getCode: Bits = hidKeyTable.readSync(getIdx(scanFifo.payload))
 
   val machine: StateMachine = new StateMachine {
     val idle = new State with EntryPoint
@@ -58,8 +65,8 @@ case class HID() extends Component {
     }
     val k1: State = new State {
       whenIsActive {
-        when(staLatch) {
-          uartCtrl.io.write.payload := hidKeyTable.readSync(idxLatch)
+        when (getCond) {
+          uartCtrl.io.write.payload := getCode
         }
         when(uartCtrl.io.write.ready) (goto(k2))
       }
@@ -84,8 +91,10 @@ case class HID() extends Component {
       }
     }
     idle.whenIsActive {
-      when(scanIdx.valid) (goto(special))
+      when(scanFifo.valid) (goto(special))
     }
     uartCtrl.io.write.valid := !isActive(idle)
+    scanFifo.ready := isActive(k1)
   }
+//  println(s"latency ${LatencyAnalysis(uartCtrl.io.write.payload, scanFifo.payload)}\n")
 }
