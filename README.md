@@ -9,6 +9,10 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/volatile-static/Keyboard?color=lime)
 ![GitHub forks](https://img.shields.io/github/forks/volatile-static/Keyboard?color=red&style=social)
 
+# 95
+
+  兼容QMK与[Vial](https://get.vial.today/)的USB键盘。
+
 # 104 
   <sub>Powered by [SpinalHDL](https://github.com/SpinalHDL)</sub>
 
@@ -39,6 +43,7 @@
  # 选型手册
 | 键数 | 主控 | 协议 | RGB | 扫描方式 | 其他 |
 | :---: | :---: | :---: | :---: | :---: | :---: |
+| 95 | STM32F401CCU6 | USB | 全 | GPIO | 带USB-hub和旋钮 |
 | 104 | EP4CE6E22 | USB + PS/2 | 一半 | 全键无冲 | [购买](https://market.m.taobao.com/app/idleFish-F2e/widle-taobao-rax/page-detail?wh_weex=true&wx_navbar_transparent=true&id=637588964083&ut_sk=1.X7R74tmmaOsDAD0RHKo4TqAp_21407387_1613018144287.Copy.detail.637588964083.2206517679956&forceFlush=1) |
 | 17 | nRF52810QC | BLE | 全 | TCA8418 | 18650供电 |
 | 4 | STM32F103C8 | USB | 无 | GPIO | - |
